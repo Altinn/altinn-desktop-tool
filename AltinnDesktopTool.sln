@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("***REMOVED***FAE04EC0-301F-11D3-BF4B-00C04F79EFBC***REMOVED***") = "AltinnDesktopTool", "AltinnDesktopTool\AltinnDesktopTool.csproj", "***REMOVED***11BCD26A-9604-4B02-BCCF-F85C693F685F***REMOVED***"
+EndProject
+Project("***REMOVED***FAE04EC0-301F-11D3-BF4B-00C04F79EFBC***REMOVED***") = "AltinnDesktopToolTest", "AltinnDesktopToolTest\AltinnDesktopToolTest.csproj", "***REMOVED***2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151***REMOVED***"
+EndProject
+Project("***REMOVED***FAE04EC0-301F-11D3-BF4B-00C04F79EFBC***REMOVED***") = "RestClient", "RestClient\RestClient.csproj", "***REMOVED***BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E***REMOVED***"
+EndProject
+Project("***REMOVED***FAE04EC0-301F-11D3-BF4B-00C04F79EFBC***REMOVED***") = "RestClient.Test", "RestClient.Test\RestClient.Test.csproj", "***REMOVED***F97E7FF9-C66B-4C94-8503-D72ED7EE459B***REMOVED***"
+EndProject
+Project("***REMOVED***FAE04EC0-301F-11D3-BF4B-00C04F79EFBC***REMOVED***") = "IntegrationUnitTest", "IntegrationUnitTest\IntegrationUnitTest.csproj", "***REMOVED***B6215DBE-2806-49ED-91A6-7185256B1A85***REMOVED***"
+EndProject
+Project("***REMOVED***930C7802-8A8C-48F9-8165-68863BCCD9DD***REMOVED***") = "AltinnDesktopToolSetup", "AltinnDesktopToolSetup\AltinnDesktopToolSetup.wixproj", "***REMOVED***18FD8A01-A620-4C49-9214-389CE758CE87***REMOVED***"
+	ProjectSection(ProjectDependencies) = postProject
+		***REMOVED***BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E***REMOVED*** = ***REMOVED***BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E***REMOVED***
+	EndProjectSection
+EndProject
+Project("***REMOVED***2150E333-8FDC-42A3-9474-1A3956D46DE8***REMOVED***") = "Solution Items", "Solution Items", "***REMOVED***22CC999D-5C00-46F7-A209-A6D8F9E7757B***REMOVED***"
+	ProjectSection(SolutionItems) = preProject
+		AltinnDesktopTool.sln.DotSettings = AltinnDesktopTool.sln.DotSettings
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		***REMOVED***11BCD26A-9604-4B02-BCCF-F85C693F685F***REMOVED***.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		***REMOVED***11BCD26A-9604-4B02-BCCF-F85C693F685F***REMOVED***.Debug|Any CPU.Build.0 = Debug|Any CPU
+		***REMOVED***11BCD26A-9604-4B02-BCCF-F85C693F685F***REMOVED***.Release|Any CPU.ActiveCfg = Release|Any CPU
+		***REMOVED***11BCD26A-9604-4B02-BCCF-F85C693F685F***REMOVED***.Release|Any CPU.Build.0 = Release|Any CPU
+		***REMOVED***2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151***REMOVED***.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		***REMOVED***2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151***REMOVED***.Debug|Any CPU.Build.0 = Debug|Any CPU
+		***REMOVED***2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151***REMOVED***.Release|Any CPU.ActiveCfg = Release|Any CPU
+		***REMOVED***2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151***REMOVED***.Release|Any CPU.Build.0 = Release|Any CPU
+		***REMOVED***BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E***REMOVED***.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		***REMOVED***BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E***REMOVED***.Debug|Any CPU.Build.0 = Debug|Any CPU
+		***REMOVED***BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E***REMOVED***.Release|Any CPU.ActiveCfg = Release|Any CPU
+		***REMOVED***BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E***REMOVED***.Release|Any CPU.Build.0 = Release|Any CPU
+		***REMOVED***F97E7FF9-C66B-4C94-8503-D72ED7EE459B***REMOVED***.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		***REMOVED***F97E7FF9-C66B-4C94-8503-D72ED7EE459B***REMOVED***.Debug|Any CPU.Build.0 = Debug|Any CPU
+		***REMOVED***F97E7FF9-C66B-4C94-8503-D72ED7EE459B***REMOVED***.Release|Any CPU.ActiveCfg = Release|Any CPU
+		***REMOVED***F97E7FF9-C66B-4C94-8503-D72ED7EE459B***REMOVED***.Release|Any CPU.Build.0 = Release|Any CPU
+		***REMOVED***B6215DBE-2806-49ED-91A6-7185256B1A85***REMOVED***.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		***REMOVED***B6215DBE-2806-49ED-91A6-7185256B1A85***REMOVED***.Debug|Any CPU.Build.0 = Debug|Any CPU
+		***REMOVED***B6215DBE-2806-49ED-91A6-7185256B1A85***REMOVED***.Release|Any CPU.ActiveCfg = Release|Any CPU
+		***REMOVED***B6215DBE-2806-49ED-91A6-7185256B1A85***REMOVED***.Release|Any CPU.Build.0 = Release|Any CPU
+		***REMOVED***18FD8A01-A620-4C49-9214-389CE758CE87***REMOVED***.Debug|Any CPU.ActiveCfg = Debug|x86
+		***REMOVED***18FD8A01-A620-4C49-9214-389CE758CE87***REMOVED***.Release|Any CPU.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

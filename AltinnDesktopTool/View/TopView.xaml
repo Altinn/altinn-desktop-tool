@@ -1,0 +1,32 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AltinnDesktopTool.View"
+             xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" x:Class="AltinnDesktopTool.View.TopView"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="91,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Center"/>
+        <Image x:Name="image" Source="Images\a-logo-blue.png" Margin="10,20,10,10" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <!--
+        <Button Width="40" Height="40" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top" Style="***REMOVED***DynamicResource MetroCircleButtonStyle***REMOVED***">
+            <Rectangle Width="30" Height="30">
+                <Rectangle.Fill>
+                    <VisualBrush Stretch="Fill"
+                    Visual="***REMOVED***StaticResource appbar_information_circle***REMOVED***" />
+                </Rectangle.Fill>
+            </Rectangle>
+        </Button>
+        
+        <Button x:Name="button" Content="i" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top" Width="29" IsDefault="True" Custom:TextBoxHelper.IsClearTextButtonBehaviorEnabled="True" Custom:ButtonHelper.PreserveTextCase="True" Style="***REMOVED***DynamicResource MetroCircleButtonStyle***REMOVED***"/>
+        -->
+    </Grid>
+</UserControl>

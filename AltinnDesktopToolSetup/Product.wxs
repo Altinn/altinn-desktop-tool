@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define AltinnDesktopTool_TargetDir=$(var.AltinnDesktopTool.TargetDir)?>
+  <Product Id="A00397C7-8191-4A26-B20C-DF662D8F6C29" Name="Altinn Toolkit" Language="1033" Version="1.0.0.0" Manufacturer="Altinn" UpgradeCode="5de716d3-3f9d-4c96-a1b0-286353b87cb9">
+    <!--<Package InstallerVersion="200" Compressed="yes" InstallPrivileges="limited" InstallScope="perUser" />-->
+    <!--<Package InstallerVersion="200" Compressed="yes" InstallPrivileges="elevated" InstallScope="perMachine" />-->
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    
+    <!--<UIRef Id="WixUI_InstallDir" />-->
+    <!--<UIRef Id="WixUI_Common" />-->
+    
+    <Icon Id="altinn.ico" SourceFile="altinn.ico" />
+    <Property Id="ARPPRODUCTICON" Value="altinn.ico" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes"/>
+
+    <Feature Id="ProductFeature" Title="AltinnToolkitSetup" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="Configuration_files" />
+      <ComponentRef Id="ApplicationShortcut" />
+    </Feature>
+
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="0D838500-6384-491C-BAAC-1E2382BDC10A">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="Altinn Toolkit"
+                  Target="[#AltinnDesktopTool.exe]"
+                  WorkingDirectory="INSTALLFOLDER"
+                  Icon = "altinn.ico"/>
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\Microsoft\MyApplicationName" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="AltinnToolkit">
+          <Directory Id="Configuration" Name="Configuration" />
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="Altinn Toolkit"/>
+      </Directory>
+    </Directory>
+
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="AltinnDesktopTool.exe" Guid="e0a8f871-a572-4e3b-88a3-4a267d2f4e7c">
+        <File Id="AltinnDesktopTool.exe" Name="AltinnToolkit.exe" Source="$(var.AltinnDesktopTool_TargetDir)AltinnToolkit.exe" />
+      </Component>
+      <Component Id="AltinnDesktopTool.exe.config" Guid="3ad68517-1531-4a04-9774-0eb50f878ecc">
+        <File Id="AltinnDesktopTool.exe.config" Name="AltinnToolkit.exe.config" Source="$(var.AltinnDesktopTool_TargetDir)AltinnToolkit.exe.config" />
+      </Component>
+      <Component Id="AutoMapper.dll" Guid="83447254-9462-4654-8d2c-c8d00e0c7d3a">
+        <File Id="AutoMapper.dll" Name="AutoMapper.dll" Source="$(var.AltinnDesktopTool_TargetDir)AutoMapper.dll" />
+      </Component>
+      <Component Id="Microsoft.Practices.ServiceLocation.dll" Guid="dd14e739-c2bc-4f56-86c4-e38921517e61">
+        <File Id="Microsoft.Practices.ServiceLocation.dll" Name="Microsoft.Practices.ServiceLocation.dll" Source="$(var.AltinnDesktopTool_TargetDir)Microsoft.Practices.ServiceLocation.dll" />
+      </Component>
+      <Component Id="log4net.dll" Guid="92edbbc3-1683-4839-894b-38d5146497df">
+        <File Id="log4net.dll" Name="log4net.dll" Source="$(var.AltinnDesktopTool_TargetDir)log4net.dll" />
+      </Component>
+      <Component Id="MahApps.Metro.dll" Guid="92ee89e0-4dde-4eda-bb66-602d2cf462f8">
+        <File Id="MahApps.Metro.dll" Name="MahApps.Metro.dll" Source="$(var.AltinnDesktopTool_TargetDir)MahApps.Metro.dll" />
+      </Component>
+      <Component Id="System.Windows.Interactivity.dll" Guid="0ef47261-7361-4564-ab7b-63a9e1941dcc">
+        <File Id="System.Windows.Interactivity.dll" Name="System.Windows.Interactivity.dll" Source="$(var.AltinnDesktopTool_TargetDir)System.Windows.Interactivity.dll" />
+      </Component>
+      <Component Id="GalaSoft.MvvmLight.dll" Guid="050be3f1-97b7-4483-9090-0f06439c0bbb">
+        <File Id="GalaSoft.MvvmLight.dll" Name="GalaSoft.MvvmLight.dll" Source="$(var.AltinnDesktopTool_TargetDir)GalaSoft.MvvmLight.dll" />
+      </Component>
+      <Component Id="GalaSoft.MvvmLight.Extras.dll" Guid="55af78a9-ee3f-47dc-8cf6-746575c45199">
+        <File Id="GalaSoft.MvvmLight.Extras.dll" Name="GalaSoft.MvvmLight.Extras.dll" Source="$(var.AltinnDesktopTool_TargetDir)GalaSoft.MvvmLight.Extras.dll" />
+      </Component>
+      <Component Id="GalaSoft.MvvmLight.Platform.dll" Guid="44478b57-e54b-45c1-a191-7e7ac6cb7fd0">
+        <File Id="GalaSoft.MvvmLight.Platform.dll" Name="GalaSoft.MvvmLight.Platform.dll" Source="$(var.AltinnDesktopTool_TargetDir)GalaSoft.MvvmLight.Platform.dll" />
+      </Component>
+      <Component Id="Newtonsoft.Json.dll" Guid="2123d9be-a782-4031-b30d-dbbd692473c7">
+        <File Id="Newtonsoft.Json.dll" Name="Newtonsoft.Json.dll" Source="$(var.AltinnDesktopTool_TargetDir)Newtonsoft.Json.dll" />
+      </Component>
+      <Component Id="RestClient.dll" Guid="c77379cc-dccf-496e-93e2-42043d82b4c5">
+        <File Id="RestClient.dll" Name="RestClient.dll" Source="$(var.AltinnDesktopTool_TargetDir)RestClient.dll" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="Configuration_files" Directory="Configuration">
+      <Component Id="Configuration_EnvironmentConfigurations.xml" Guid="8930250f-7969-4b3a-a759-ba94efb154be">
+        <File Id="Configuration_EnvironmentConfigurations.xml" Name="EnvironmentConfigurations.xml" Source="$(var.AltinnDesktopTool_TargetDir)Configuration\EnvironmentConfigurations.xml" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
