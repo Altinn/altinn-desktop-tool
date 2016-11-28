@@ -9,7 +9,7 @@
     <ignoreSslErrors>false</ignoreSslErrors>
     <timeout>30</timeout>
   </EnvironmentConfiguration>
-  <!--
+  
    <EnvironmentConfiguration>
     <name>AT07</name>
     <themeName>Purple</themeName>
@@ -20,5 +20,26 @@
     <ignoreSslErrors>false</ignoreSslErrors>
     <timeout>30</timeout>
   </EnvironmentConfiguration>
-  -->
+   <EnvironmentConfiguration>
+    <name>AT08</name>
+    <themeName>Orange</themeName>
+    <apiKey></apiKey>
+    <baseAddress>#url#/api/serviceowner/
+    </baseAddress>
+    <thumbprint></thumbprint>
+    <ignoreSslErrors>false</ignoreSslErrors>
+    <timeout>30</timeout>
+    <timeout>30</timeout>
+  </EnvironmentConfiguration>
+   <EnvironmentConfiguration>
+    <name>ST02</name>
+    <themeName>Green</themeName>
+    <apiKey></apiKey>
+    <baseAddress>#url#/api/serviceowner/
+    </baseAddress>
+    <thumbprint></thumbprint>
+    <ignoreSslErrors>false</ignoreSslErrors>
+    <timeout>30</timeout>
+  </EnvironmentConfiguration>
+  
 </EnvironmentConfigurations>
