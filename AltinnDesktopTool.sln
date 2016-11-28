@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltinnDesktopTool", "AltinnDesktopTool\AltinnDesktopTool.csproj", "{11BCD26A-9604-4B02-BCCF-F85C693F685F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltinnDesktopToolTest", "AltinnDesktopToolTest\AltinnDesktopToolTest.csproj", "{2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestClient", "RestClient\RestClient.csproj", "{BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestClient.Test", "RestClient.Test\RestClient.Test.csproj", "{F97E7FF9-C66B-4C94-8503-D72ED7EE459B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationUnitTest", "IntegrationUnitTest\IntegrationUnitTest.csproj", "{B6215DBE-2806-49ED-91A6-7185256B1A85}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "AltinnDesktopToolSetup", "AltinnDesktopToolSetup\AltinnDesktopToolSetup.wixproj", "{18FD8A01-A620-4C49-9214-389CE758CE87}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E} = {BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{22CC999D-5C00-46F7-A209-A6D8F9E7757B}"
+	ProjectSection(SolutionItems) = preProject
+		AltinnDesktopTool.sln.DotSettings = AltinnDesktopTool.sln.DotSettings
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11BCD26A-9604-4B02-BCCF-F85C693F685F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11BCD26A-9604-4B02-BCCF-F85C693F685F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11BCD26A-9604-4B02-BCCF-F85C693F685F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11BCD26A-9604-4B02-BCCF-F85C693F685F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F97E7FF9-C66B-4C94-8503-D72ED7EE459B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F97E7FF9-C66B-4C94-8503-D72ED7EE459B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F97E7FF9-C66B-4C94-8503-D72ED7EE459B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F97E7FF9-C66B-4C94-8503-D72ED7EE459B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6215DBE-2806-49ED-91A6-7185256B1A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6215DBE-2806-49ED-91A6-7185256B1A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6215DBE-2806-49ED-91A6-7185256B1A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6215DBE-2806-49ED-91A6-7185256B1A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18FD8A01-A620-4C49-9214-389CE758CE87}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{18FD8A01-A620-4C49-9214-389CE758CE87}.Release|Any CPU.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

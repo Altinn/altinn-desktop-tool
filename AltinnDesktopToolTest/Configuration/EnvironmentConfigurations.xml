@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EnvironmentConfigurations>
+  <EnvironmentConfiguration>
+    <name>PROD</name>
+    <themeName>Blue</themeName>
+    <apiKey><!--API KEY - ORDER FROM BASEFARM--></apiKey>
+    <baseAddress><!--URL TO ALTINN ENVIRONMENT -->/api/serviceowner/</baseAddress>
+    <thumbprint><!--CERTIFICATE THUMBPRINT --></thumbprint>
+    <ignoreSslErrors>false</ignoreSslErrors>
+    <timeout>30</timeout>
+  </EnvironmentConfiguration>
+</EnvironmentConfigurations>

@@ -1,0 +1,9 @@
+<StyleCopSettings Version="105">
+  <GlobalSettings>
+    <CollectionProperty Name="RecognizedWords">
+      <Value>deserializable</Value>
+      <Value>Dto</Value>
+      <Value>Json</Value>
+    </CollectionProperty>
+  </GlobalSettings>
+</StyleCopSettings>
