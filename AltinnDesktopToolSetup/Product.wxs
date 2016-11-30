@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
   <?define AltinnDesktopTool_TargetDir=$(var.AltinnDesktopTool.TargetDir)?>
-  <Product Id="A00397C7-8191-4A26-B20C-DF662D8F6C29" Name="Altinn Toolkit" Language="1033" Version="1.0.0.0" Manufacturer="Altinn" UpgradeCode="5de716d3-3f9d-4c96-a1b0-286353b87cb9">
-    <!--<Package InstallerVersion="200" Compressed="yes" InstallPrivileges="limited" InstallScope="perUser" />-->
-    <!--<Package InstallerVersion="200" Compressed="yes" InstallPrivileges="elevated" InstallScope="perMachine" />-->
+  <Product Id="A00397C7-8191-4A26-B20C-DF662D8F6C28" Name="Altinn Toolkit" Language="1033" Version="1.0.1"
+           Manufacturer="Altinn" UpgradeCode="5de716d3-3f9d-4c96-a1b0-286353b87cb9">
+    <!-- Generate new GUID and place in Id (Id="") attriute and change the Version to create an update installer-->
     <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
-    
-    <!--<UIRef Id="WixUI_InstallDir" />-->
-    <!--<UIRef Id="WixUI_Common" />-->
-    
+
     <Icon Id="altinn.ico" SourceFile="altinn.ico" />
     <Property Id="ARPPRODUCTICON" Value="altinn.ico" />
 
-    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of Altinn Toolkit is already installed." />
     <MediaTemplate EmbedCab="yes"/>
 
     <Feature Id="ProductFeature" Title="AltinnToolkitSetup" Level="1">
