@@ -1,18 +1,18 @@
 ﻿namespace AltinnDesktopTool.Configuration
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Configuration for User Interface
-***REMOVED***
+    /// </summary>
     public interface IUiEnvironmentConfig
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Gets or sets the Name of environment
-    ***REMOVED***
-        string Name ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        string Name { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the Name of theme selected for this environment
-    ***REMOVED***
-        string ThemeName ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        string ThemeName { get; set; }
+    }
+}

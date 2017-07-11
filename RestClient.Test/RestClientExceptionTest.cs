@@ -2,114 +2,114 @@
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
-***REMOVED***
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using RestClient.Resources;
 
 namespace RestClient.Test
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Test class for unit tests of the RestClientException class.
-***REMOVED***
-***REMOVED***
+    /// </summary>
+    [TestClass]
     public class RestClientExceptionTest
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Gets or sets the test context for the current test.
-    ***REMOVED***
-        public TestContext TestContext ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public TestContext TestContext { get; set; }
 
-    ***REMOVED***
-***REMOVED***
+        /// <summary>
+        /// Scenario: 
         ///   Instantiate a new instance of the RestClientException class with a message.
-***REMOVED***
+        /// Expected Result: 
         ///   A new RestClientException instance is created.
-***REMOVED***
+        /// Success Criteria: 
         ///   The Message property of the RestClientException is correctly set.
-    ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        [TestCategory("RestClient")]
+        [TestMethod]
         public void RestClientExceptionTest_InstantiationWithMessage_MessageCorrect()
-        ***REMOVED***
-***REMOVED***
+        {
+            // Arrange
             const string ExpectedMessage = "Message";
 
-***REMOVED***
+            // Act
             RestClientException target = new RestClientException(ExpectedMessage);
 
-***REMOVED***
+            // Assert
             Assert.AreEqual(ExpectedMessage, target.Message);
-***REMOVED***
+        }
 
-    ***REMOVED***
-***REMOVED***
+        /// <summary>
+        /// Scenario: 
         ///   Instantiate a new instance of the RestClientException class with a message and error code.
-***REMOVED***
+        /// Expected Result: 
         ///   A new RestClientException instance is created.
-***REMOVED***
+        /// Success Criteria: 
         ///   The Message and the ErrorCode properties of the RestClientException is correctly set.
-    ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        [TestCategory("RestClient")]
+        [TestMethod]
         public void RestClientExceptionTest_InstantiationWithMessageAndErrorCode_MessageAndErrorCodeCorrect()
-        ***REMOVED***
-***REMOVED***
+        {
+            // Arrange
             const string ExpectedMessage = "Message";
             const string ExpectedErrorCode = "ErrorCode";
 
-***REMOVED***
+            // Act
             RestClientException target = new RestClientException(ExpectedMessage, ExpectedErrorCode);
 
-***REMOVED***
+            // Assert
             Assert.AreEqual(ExpectedMessage, target.Message);
             Assert.AreEqual(ExpectedErrorCode, target.ErrorCode);
-***REMOVED***
+        }
 
-    ***REMOVED***
-***REMOVED***
+        /// <summary>
+        /// Scenario: 
         ///   Serialize and deserialize an instance of the RestClientException class.
-***REMOVED***
+        /// Expected Result: 
         ///   The RestClientException instance is serialized and deserialized successfully.
-***REMOVED***
+        /// Success Criteria: 
         ///   The new instance of the RestClientException class is identical to the original before serialization and deserialization.
-    ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        [TestCategory("RestClient")]
+        [TestMethod]
         public void RestClientExceptionTest_SerializationDeserialization_InputEqualOutput()
-        ***REMOVED***
-***REMOVED***
+        {
+            // Arrange
             IOException innerException = new IOException("IOException");
             RestClientException expected = new RestClientException("Message", "ErrorCode", innerException);
 
-***REMOVED***
+            // Act
             RestClientException actual = Deserialize<RestClientException>(Serialize(expected));
 
-***REMOVED***
+            // Assert
             Assert.AreEqual(expected.Message, actual.Message);
             Assert.AreEqual(expected.ErrorCode, actual.ErrorCode);
 
             Assert.IsNotNull(expected.InnerException);
             Assert.IsNotNull(actual.InnerException);
             Assert.AreEqual(expected.InnerException.Message, actual.InnerException.Message);
-***REMOVED***
+        }
 
         #region Private helper methods
 
         private static Stream Serialize(object source)
-        ***REMOVED***
+        {
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new MemoryStream();
             formatter.Serialize(stream, source);
             return stream;
-***REMOVED***
+        }
 
         private static T Deserialize<T>(Stream stream)
-        ***REMOVED***
+        {
             IFormatter formatter = new BinaryFormatter();
             stream.Position = 0;
             return (T)formatter.Deserialize(stream);
-***REMOVED***
+        }
 
         #endregion
-***REMOVED***
-***REMOVED***
+    }
+}

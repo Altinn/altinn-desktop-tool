@@ -1,18 +1,18 @@
 ﻿namespace AltinnDesktopTool.Model
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Model for Official Contact
-***REMOVED***
+    /// </summary>
     public class OfficialContactModel : ModelBase
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Gets or sets the Mobile number as received from source
-    ***REMOVED***
-        public string MobileNumber ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string MobileNumber { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the Email Address as received from source
-    ***REMOVED***
-        public string EmailAddress ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        public string EmailAddress { get; set; }
+    }
+}

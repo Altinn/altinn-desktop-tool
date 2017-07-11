@@ -2,15 +2,15 @@
 using GalaSoft.MvvmLight;
 
 namespace AltinnDesktopTool.ViewModel
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Base class for ViewModels
-***REMOVED***
+    /// </summary>
     public class AltinnViewModelBase : ViewModelBase
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Gets or sets the Model object of the ViewModel class
-    ***REMOVED***
-        public virtual ModelBase Model ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        public virtual ModelBase Model { get; set; }
+    }
+}

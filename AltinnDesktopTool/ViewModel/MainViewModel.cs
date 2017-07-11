@@ -10,34 +10,34 @@ using GalaSoft.MvvmLight.Command;
 using MahApps.Metro;
 
 namespace AltinnDesktopTool.ViewModel
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// ViewModel for MainView
-***REMOVED***
+    /// </summary>
     public class MainViewModel : ViewModelBase
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Initializes a new instance of the MainViewModel class.
-    ***REMOVED***        
+        /// </summary>        
         public MainViewModel()
-        ***REMOVED***
+        {
             PubSub<string>.RegisterEvent(EventNames.EnvironmentChangedEvent, this.EnvironmentChangedEventHandler);
             this.ClosingWindowCommand = new RelayCommand<CancelEventArgs>(this.ClosingWindowCommandHandler);
-***REMOVED***
+        }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets Closing window command
-    ***REMOVED***
-        public RelayCommand<CancelEventArgs> ClosingWindowCommand ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public RelayCommand<CancelEventArgs> ClosingWindowCommand { get; set; }
 
         private void ClosingWindowCommandHandler(CancelEventArgs obj)
-        ***REMOVED***
+        {
             ViewModelLocator.Cleanup();
-***REMOVED***
+        }
         
         private void EnvironmentChangedEventHandler(object sender, PubSubEventArgs<string> args)
-        ***REMOVED***
+        {
             ThemeManager.ChangeAppStyle(Application.Current, ThemeManager.GetAccent(EnvironmentConfigurationManager.ActiveEnvironmentConfiguration.ThemeName), ThemeManager.GetAppTheme("BaseLight"));
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

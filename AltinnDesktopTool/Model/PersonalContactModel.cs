@@ -1,28 +1,28 @@
 ﻿namespace AltinnDesktopTool.Model
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Model for Personal Contact
-***REMOVED***
+    /// </summary>
     public class PersonalContactModel : ModelBase
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Gets or sets the Contact Name (as mapped from DTO)
-    ***REMOVED***
-        public string Name ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string Name { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the Social Security Number (as mapped from DTO)
-    ***REMOVED***
-        public string SocialSecurityNumber ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string SocialSecurityNumber { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets Mobile Number (as mapped from DTO)
-    ***REMOVED***
-        public string MobileNumber ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string MobileNumber { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the Email address (as mapped from DTO)
-    ***REMOVED***
-        public string EmailAddress ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        public string EmailAddress { get; set; }
+    }
+}

@@ -6,7 +6,7 @@
   </Application.Resources>
   
   In the View:
-  DataContext="***REMOVED***Binding Source=***REMOVED***StaticResource Locator***REMOVED***, Path=ViewModelName***REMOVED***"
+  DataContext="{Binding Source={StaticResource Locator}, Path=ViewModelName}"
 
   You can also use Blend to do all this with the tool's support.
   See http://www.galasoft.ch/mvvm
@@ -21,21 +21,21 @@ using GalaSoft.MvvmLight.Ioc;
 using log4net;
 using Microsoft.Practices.ServiceLocation;
 
-***REMOVED***
+using RestClient;
 
 namespace AltinnDesktopTool.ViewModel
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// This class contains static references to all the view models in the
     /// application and provides an entry point for the bindings.
-***REMOVED***
+    /// </summary>
     public class ViewModelLocator
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Initializes a new instance of the ViewModelLocator class.
-    ***REMOVED***
+        /// </summary>
         public ViewModelLocator()
-        ***REMOVED***
+        {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             // Logging
@@ -54,39 +54,39 @@ namespace AltinnDesktopTool.ViewModel
 
             // Proxy
             SimpleIoc.Default.Register<IRestQuery>(() => new RestQuery(ProxyConfigHelper.GetConfig(), ServiceLocator.Current.GetInstance<ILog>()));
-***REMOVED***
+        }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets the MainViewModel
-    ***REMOVED***
+        /// </summary>
         public ViewModelBase Main => ServiceLocator.Current.GetInstance<MainViewModel>();
         
-    ***REMOVED***
+        /// <summary>
         /// Gets the SearchOrganizationInformationViewModel
-    ***REMOVED***
+        /// </summary>
         public SearchOrganizationInformationViewModel SearchOrganizationInformationViewModel => ServiceLocator.Current.GetInstance<SearchOrganizationInformationViewModel>();
         
-    ***REMOVED***
+        /// <summary>
         /// Gets the SearchResultViewModel
-    ***REMOVED***
+        /// </summary>
         public SearchResultViewModel SearchResultViewModel => ServiceLocator.Current.GetInstance<SearchResultViewModel>();
         
-    ***REMOVED***
+        /// <summary>
         /// Gets the TopViewModel
-    ***REMOVED***
+        /// </summary>
         public TopViewModel TopViewModel => ServiceLocator.Current.GetInstance<TopViewModel>();
         
-    ***REMOVED***
+        /// <summary>
         /// Gets the FooterViewModel
-    ***REMOVED***
+        /// </summary>
         public FooterViewModel FooterViewModel => ServiceLocator.Current.GetInstance<FooterViewModel>();
 
-    ***REMOVED***
+        /// <summary>
         /// Dispose allocated resources here
-    ***REMOVED***
+        /// </summary>
         public static void Cleanup()
-        ***REMOVED***
+        {
             PubSub<object>.ClearEvents();
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

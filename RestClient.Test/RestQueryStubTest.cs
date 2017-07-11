@@ -1,100 +1,100 @@
-***REMOVED***
-***REMOVED***
+﻿using System;
+using System.Collections.Generic;
 
-***REMOVED***
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-***REMOVED***
+using RestClient.DTO;
 
 namespace RestClient.Test
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Test class for unit tests of the RestQueryStub class.
-***REMOVED***
-***REMOVED***
+    /// </summary>
+    [TestClass]
     public class RestQueryStubTest
-    ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+    {
+        /// <summary>
+        /// Scenario: 
         ///   Attempt to retrieve a list of organization where a contact point have a specific email address.
-***REMOVED***
+        /// Expected Result: 
         ///   A list of organizations.
-***REMOVED***
+        /// Success Criteria: 
         ///   The list of organizations has exactly 4 entries.
-    ***REMOVED***
-***REMOVED***
+        /// </summary>
+        [TestMethod]
         public void GetTest_FilterByEmail_ListOfOrganizations()
-        ***REMOVED***
-***REMOVED***
+        {
+            // Arrange
             IRestQuery query = new RestQueryStub();
 
-***REMOVED***
+            // Act
             IList<Organization> list = query.Get<Organization>(new KeyValuePair<string, string>("email", "pål@gmail.com"));
 
-***REMOVED***
+            // Assert
             Assert.IsTrue(list.Count == 4, "Organization stub failed");
-***REMOVED***
+        }
 
-    ***REMOVED***
-***REMOVED***
+        /// <summary>
+        /// Scenario: 
         ///   Attempt to retrieve a specific organization based on the organization number.
-***REMOVED***
+        /// Expected Result: 
         ///   An organization is returned.
-***REMOVED***
+        /// Success Criteria: 
         ///   The organization has the expected organization number.
-    ***REMOVED***
-***REMOVED***
+        /// </summary>
+        [TestMethod]
         public void GetTest_SpecificOrganization_Organization()
-        ***REMOVED***
-***REMOVED***
+        {
+            // Arrange
             IRestQuery query = new RestQueryStub();
 
-***REMOVED***
+            // Act
             Organization org = query.Get<Organization>("070238225");
 
-***REMOVED***
+            // Assert
             Assert.IsTrue(org != null && org.OrganizationNumber == "070238225", "GetOrganization Stub by Id fails");
-***REMOVED***
+        }
 
-    ***REMOVED***
-***REMOVED***
+        /// <summary>
+        /// Scenario: 
         ///   Attempt to retrieve the list of official contacts for a specific organization.
-***REMOVED***
+        /// Expected Result: 
         ///   A list of official contacts is returned.
-***REMOVED***
+        /// Success Criteria: 
         ///   The list of official contacts has exactly 3 entries.
-    ***REMOVED***
-***REMOVED***
+        /// </summary>
+        [TestMethod]
         public void GetByLinkTest_OfficialContact_OfficialContactList()
-        ***REMOVED***
-***REMOVED***
+        {
+            // Arrange
             IRestQuery query = new RestQueryStub();
 
-***REMOVED***
+            // Act
             IList<OfficialContact> list = query.GetByLink<OfficialContact>("https://tt02.altinn.basefarm.net/api/serviceowner/organizations/070238225/officialcontacts");
 
-***REMOVED***
+            // Assert
             Assert.IsTrue(list.Count == 3, "Official Contact stub failed");
-***REMOVED***
+        }
 
-    ***REMOVED***
-***REMOVED***
+        /// <summary>
+        /// Scenario: 
         ///   Attempt to retrieve a list of personal contacts for a specific organization.
-***REMOVED***
+        /// Expected Result: 
         ///   A list of personal contacts is returned.
-***REMOVED***
+        /// Success Criteria: 
         ///   The list of personal contacts has exactly 3 entries.
-    ***REMOVED***
-***REMOVED***
+        /// </summary>
+        [TestMethod]
         public void GetByLinkTest_PersonalContact_PersonalContactList()
-        ***REMOVED***
-***REMOVED***
+        {
+            // Arrange
             IRestQuery query = new RestQueryStub();
 
-***REMOVED***
+            // Act
             IList<PersonalContact> list = query.GetByLink<PersonalContact>("https://tt02.altinn.basefarm.net/api/serviceowner/organizations/070238225/personalcontacts");
 
-***REMOVED***
+            // Assert
             Assert.IsTrue(list.Count == 3, "Personal Contact stub failed");
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

@@ -3,33 +3,33 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
 namespace AltinnDesktopTool.View
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Interaction logic for SearchResultView.xaml
-***REMOVED***
+    /// </summary>
     public partial class SearchResultView
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Initializes a new instance of the SearchResultView class.
-    ***REMOVED***
+        /// </summary>
         public SearchResultView()
-        ***REMOVED***
+        {
             this.InitializeComponent();
-***REMOVED***
+        }
 
         private void UIElement_OnPreviewMouseDown(object sender, MouseButtonEventArgs e)
-        ***REMOVED***
+        {
             CheckBox checkBox = (CheckBox)sender;
             if (checkBox.IsChecked ?? false)
-            ***REMOVED***
+            {
                 checkBox.SetCurrentValue(ToggleButton.IsCheckedProperty, false);
-    ***REMOVED***
+            }
             else
-            ***REMOVED***
+            {
                 checkBox.SetCurrentValue(ToggleButton.IsCheckedProperty, true);
-    ***REMOVED***
+            }
 
             e.Handled = true;
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

@@ -1,31 +1,31 @@
 ﻿using System.Linq;
 using AltinnDesktopTool.Configuration;
-***REMOVED***
+using RestClient;
 
 namespace AltinnDesktopTool.Utils.Helpers
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Helper class for the Proxy Configuration
-***REMOVED***
+    /// </summary>
     public class ProxyConfigHelper
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Gets the RestQueryConfig object from the configuration manager. Returns production configuration by default.
-    ***REMOVED***
+        /// </summary>
         /// <returns>The IRestQueryConfig object</returns>
         public static IRestQueryConfig GetConfig()
-        ***REMOVED***
+        {
             return EnvironmentConfigurationManager.EnvironmentConfigurations.FirstOrDefault(c => c.Name == "PROD");
-***REMOVED***
+        }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets the RestQueryConfig object by name from the configuration manager.
-    ***REMOVED***
+        /// </summary>
         /// <param name="environmentName">Name of the environment</param>
         /// <returns>RestQueryConfig object which matches the environmentName</returns>
         public static IRestQueryConfig GetConfig(string environmentName)
-        ***REMOVED***
+        {
             return EnvironmentConfigurationManager.EnvironmentConfigurations.FirstOrDefault(c => c.Name == environmentName);
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

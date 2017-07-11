@@ -1,45 +1,45 @@
-***REMOVED***
+﻿using System;
 
 namespace RestClient.Controllers
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Each class implementing IRestQueryController must have this attribute to identify it as a RestQueryController and define its name.
     /// The name will be used as part of the URL to identify the controller.
-***REMOVED***
+    /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class RestQueryControllerAttribute : Attribute
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Initializes a new instance of the RestQueryControllerAttribute class with name and type set to null.
-    ***REMOVED***
+        /// </summary>
         public RestQueryControllerAttribute()
-        ***REMOVED***
-***REMOVED***
+        {
+        }
 
-    ***REMOVED***
+        /// <summary>
         /// Initializes a new instance of the RestQueryControllerAttribute class with a given name and supported type.
-    ***REMOVED***
+        /// </summary>
         /// <param name="name">The name of the controller.</param>
         /// <param name="supportedType">The type supported by the controller.</param>
         public RestQueryControllerAttribute(string name, Type supportedType)
-        ***REMOVED***
+        {
             this.Name = name;
             this.SupportedType = supportedType;
-***REMOVED***
+        }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the name identifying the controller
-    ***REMOVED***
-        public string Name ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string Name { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the supported type for a controller.
-    ***REMOVED***
-        public Type SupportedType ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public Type SupportedType { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the controller type.
-    ***REMOVED***
-        internal Type ControllerType ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        internal Type ControllerType { get; set; }
+    }
+}

@@ -9,53 +9,53 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
 namespace AltinnDesktopTool.ViewModel
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// ViewModel class, container for Environment change related components
-***REMOVED***
+    /// </summary>
     public class FooterViewModel : ViewModelBase
-    ***REMOVED***                
-    ***REMOVED***
+    {                
+        /// <summary>
         /// Initializes a new instance of the <see cref="FooterViewModel"/> class.
         /// ViewModel for Footer view
-    ***REMOVED***
+        /// </summary>
         public FooterViewModel()
-        ***REMOVED***
+        {
             this.ChangeEnvironmentCommand = new RelayCommand(this.ChangeEnvironmentHandler);
 
             this.EnvironmentNames = new ObservableCollection<string>(EnvironmentConfigurationManager.EnvironmentConfigurations.Select(c => c.Name).ToList());
             this.SelectedEnvironment = EnvironmentConfigurationManager.ActiveEnvironmentConfiguration.Name;
 
             PubSub<string>.AddEvent(EventNames.EnvironmentChangedEvent, this.EnvironmentChangedEventHandler);
-***REMOVED***
+        }
 
-    ***REMOVED***
+        /// <summary>
         /// Environment changed event
-    ***REMOVED***
+        /// </summary>
         public event PubSubEventHandler<string> EnvironmentChangedEventHandler;
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the Selected environment name
-    ***REMOVED***
-        public string SelectedEnvironment ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string SelectedEnvironment { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the available environment names
-    ***REMOVED***
-        public ObservableCollection<string> EnvironmentNames ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public ObservableCollection<string> EnvironmentNames { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets a command which will define a behavior on Change environment event
-    ***REMOVED***
-        public ICommand ChangeEnvironmentCommand ***REMOVED*** get; private set; ***REMOVED***        
+        /// </summary>
+        public ICommand ChangeEnvironmentCommand { get; private set; }        
 
-    ***REMOVED***
+        /// <summary>
         /// Event handler for the ChangeEnvironment command. Sets the active environment configuration and raises EnvironmentChanged event.
-    ***REMOVED***
+        /// </summary>
         public void ChangeEnvironmentHandler()
-        ***REMOVED***
+        {
             EnvironmentConfigurationManager.ActiveEnvironmentConfiguration = EnvironmentConfigurationManager.EnvironmentConfigurations.Single(c => c.Name == this.SelectedEnvironment);
             PubSub<string>.RaiseEvent(EventNames.EnvironmentChangedEvent, this, new PubSubEventArgs<string>(this.SelectedEnvironment));
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

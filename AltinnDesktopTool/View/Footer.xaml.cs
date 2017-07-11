@@ -1,16 +1,16 @@
 ﻿namespace AltinnDesktopTool.View
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Interaction logic for Footer.xaml
-***REMOVED***
+    /// </summary>
     public partial class Footer
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Initializes a new instance of the Footer class.
-    ***REMOVED***
+        /// </summary>
         public Footer()
-        ***REMOVED***
+        {
             this.InitializeComponent();
-***REMOVED*** 
-***REMOVED***
-***REMOVED***
+        } 
+    }
+}

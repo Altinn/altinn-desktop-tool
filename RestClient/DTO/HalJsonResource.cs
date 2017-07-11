@@ -1,43 +1,43 @@
-***REMOVED***
+﻿using System;
 
 namespace RestClient.DTO
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Base class for Dto objects - deserializable from HAL+JSON format
-***REMOVED***
+    /// </summary>
     public class HalJsonResource
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Initializes a new instance of the <see cref="HalJsonResource"/> class
-    ***REMOVED***
+        /// </summary>
         public HalJsonResource()
-        ***REMOVED***
+        {
             Type t = this.GetType();
             if (t.IsDefined(typeof(PluralNameAttribute), false) == false)
-            ***REMOVED***
+            {
                 throw new InvalidOperationException("Missing Plural name attribute on HalJsonResource class!");
-    ***REMOVED***
-***REMOVED***
-***REMOVED***
+            }
+        }
+    }
 
-***REMOVED***
+    /// <summary>
     /// Attribute for indicating object list name
-***REMOVED***
+    /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
     public class PluralNameAttribute : Attribute
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Gets the plural name
-    ***REMOVED***
+        /// </summary>
         public readonly string PluralName;
 
-    ***REMOVED***
+        /// <summary>
         /// Initializes a new instance of the <see cref="PluralNameAttribute"/> class
-    ***REMOVED***
+        /// </summary>
         /// <param name="pluralName">Plural name to be set</param>
         public PluralNameAttribute(string pluralName)
-        ***REMOVED***
+        {
             this.PluralName = pluralName;
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

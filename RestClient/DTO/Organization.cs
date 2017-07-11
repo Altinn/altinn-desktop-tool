@@ -1,46 +1,46 @@
-***REMOVED***
+﻿using System;
 
 namespace RestClient.DTO
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Data transfer object representing an organization from the service owner API.
-***REMOVED***
+    /// </summary>
     [PluralName("Organizations")]
     public class Organization : HalJsonResource
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Gets or sets the name of the organization.
-    ***REMOVED***
-        public string Name ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string Name { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the organization number.
-    ***REMOVED***
-        public string OrganizationNumber ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string OrganizationNumber { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the type of organization.
-    ***REMOVED***
-        public string Type ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string Type { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the time for the last update to the organization profile.
-    ***REMOVED***
-        public DateTime? LastChanged ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public DateTime? LastChanged { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the time for the last profile confirmation.
-    ***REMOVED***
-        public DateTime? LastConfirmed ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public DateTime? LastConfirmed { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the list of official contacts associated with the organization.
-    ***REMOVED***
-        public string OfficialContacts ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string OfficialContacts { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the list of personal contacts associated with the organization.
-    ***REMOVED***
-        public string PersonalContacts ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        public string PersonalContacts { get; set; }
+    }
+}

@@ -1,28 +1,28 @@
 ﻿namespace AltinnDesktopTool.Model
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Indicates the type of input given in the search.
-***REMOVED***
+    /// </summary>
     public enum SearchType
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// The search input is undefined. Try to find the correct type automatically.
-    ***REMOVED***
+        /// </summary>
         Smart = 0,
 
-    ***REMOVED***
+        /// <summary>
         /// The search input is a phone number.
-    ***REMOVED***
+        /// </summary>
         PhoneNumber = 1,
 
-    ***REMOVED***
+        /// <summary>
         /// The search input is an email address.
-    ***REMOVED***
+        /// </summary>
         EMail = 2,
 
-    ***REMOVED***
+        /// <summary>
         /// The search input is an organization number.
-    ***REMOVED***
+        /// </summary>
         OrganizationNumber = 3
-***REMOVED***
-***REMOVED***
+    }
+}

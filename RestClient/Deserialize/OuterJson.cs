@@ -2,24 +2,24 @@
 using Newtonsoft.Json.Linq;
 
 namespace RestClient.Deserialize
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Deserialization wrapper for the outer JSON object which comes with the HAL format
-***REMOVED***
+    /// </summary>
     public class OuterJson
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         ///  Gets or sets the _links container
-    ***REMOVED***
+        /// </summary>
         [JsonProperty(PropertyName = "_links")]
         // ReSharper disable once InconsistentNaming
-        public JObject _links ***REMOVED*** get; set; ***REMOVED***
+        public JObject _links { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         ///  Gets or sets the _embedded container
-    ***REMOVED***
+        /// </summary>
         [JsonProperty(PropertyName = "_embedded")]
         // ReSharper disable once InconsistentNaming
-        public JObject _embedded ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        public JObject _embedded { get; set; }
+    }
+}

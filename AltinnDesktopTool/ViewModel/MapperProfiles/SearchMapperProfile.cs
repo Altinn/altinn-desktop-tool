@@ -1,20 +1,20 @@
 ﻿using AutoMapper;
 
 namespace AltinnDesktopTool.ViewModel.MapperProfiles
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// SearchMapperProfile class for configuring profile maps
-***REMOVED***
+    /// </summary>
     public class SearchMapperProfile : Profile
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Initializes a new instance of the <see cref="SearchMapperProfile"/> class, configures AutoMapper
-    ***REMOVED***
+        /// </summary>
         public SearchMapperProfile()
-        ***REMOVED***
+        {
             this.CreateMap<RestClient.DTO.Organization, Model.OrganizationModel>();
             this.CreateMap<RestClient.DTO.OfficialContact, Model.OfficialContactModel>();
             this.CreateMap<RestClient.DTO.PersonalContact, Model.PersonalContactModel>();
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

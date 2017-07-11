@@ -1,16 +1,16 @@
 ﻿namespace AltinnDesktopTool.View
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Interaction logic for TopView.xaml
-***REMOVED***
+    /// </summary>
     public partial class TopView
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Initializes a new instance of the TopView class.
-    ***REMOVED***
+        /// </summary>
         public TopView()
-        ***REMOVED***
+        {
             this.InitializeComponent();
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

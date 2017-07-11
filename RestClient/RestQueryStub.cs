@@ -1,17 +1,17 @@
-***REMOVED***
-***REMOVED***
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 
-***REMOVED***
+using RestClient.DTO;
 
 namespace RestClient
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// The RestQueryStub class is an implementation of the IRestQuery interface. The purpose of this class is to act as a stand in
     /// for the actual RestQuery during development of a program using this library.
-***REMOVED***
+    /// </summary>
     public class RestQueryStub : IRestQuery
-    ***REMOVED***
+    {
         private static readonly PropertyInfo PropOrgName = typeof(Organization).GetProperty("Name");
         private static readonly PropertyInfo PropOrgLastChanged = typeof(Organization).GetProperty("LastChanged");
         private static readonly PropertyInfo PropOrgType = typeof(Organization).GetProperty("Type");
@@ -32,19 +32,19 @@ namespace RestClient
         private static readonly PropertyInfo PropPersContName = typeof(PersonalContact).GetProperty("Name");
         private static readonly PropertyInfo PropPersContSocialSecurityNumber = typeof(PersonalContact).GetProperty("SocialSecurityNumber");
 
-    ***REMOVED***
+        /// <summary>
         /// Fetches a object by a given link (url).
         /// This is useful where a link is returned in a previous call.
-    ***REMOVED***
+        /// </summary>
         /// <typeparam name="T">The type of object to be retrieved.</typeparam>
         /// <param name="id">The id of the object to retrieve</param>
         /// <returns>An object, possibly null if none found</returns>
         public T Get<T>(string id) where T : HalJsonResource
-        ***REMOVED***
+        {
             T org = Activator.CreateInstance<T>();
 
             switch (id)
-            ***REMOVED***
+            {
                 case "070238225":
                     CreateOrg1(org);
                     break;
@@ -57,21 +57,21 @@ namespace RestClient
                 case "010007828":
                     this.CreateOrg4(org);
                     break;
-    ***REMOVED***
+            }
 
             return org;
-***REMOVED***
+        }
 
-    ***REMOVED***
+        /// <summary>
         /// Search for a list of objects by filtering on a given name value pair.
         /// The possible values name value pairs depends on the controller being called.
         /// The controller is identified by the type T.
-    ***REMOVED***
+        /// </summary>
         /// <typeparam name="T">The type of objects to be retrieved. This also determines the controller to call.</typeparam>
         /// <param name="filter">The name value pair filter</param>
         /// <returns>A list of objects, empty or null if none found</returns>
         public IList<T> Get<T>(KeyValuePair<string, string> filter) where T : HalJsonResource
-        ***REMOVED***
+        {
             T org1 = Activator.CreateInstance<T>();
             T org2 = Activator.CreateInstance<T>();
             T org3 = Activator.CreateInstance<T>();
@@ -83,14 +83,14 @@ namespace RestClient
             this.CreateOrg4(org4);
 
             return new List<T>()
-            ***REMOVED***
+            {
                 org1, org2, org3, org4
-    ***REMOVED***
-***REMOVED***
+            };
+        }
 
-    ***REMOVED***
+        /// <summary>
         /// Fetches a list of objects from the given URL location.
-    ***REMOVED***
+        /// </summary>
         /// <typeparam name="T">The type of data object (DTO) which must be a subclass of <see cref="HalJsonResource"/> to be returned.</typeparam>
         /// <param name="url">The url to send to Altinn.</param>
         /// <returns>The found object or null if not found.</returns>
@@ -98,98 +98,98 @@ namespace RestClient
         /// Controller is identified by the controller having [RestQueryController(SupportedType=T)] defined with a matching T type.
         /// </remarks>
         public IList<T> GetByLink<T>(string url) where T : HalJsonResource
-        ***REMOVED***
+        {
             T contact1 = Activator.CreateInstance<T>();
             T contact2 = Activator.CreateInstance<T>();
             T contact3 = Activator.CreateInstance<T>();
 
             List<T> list = new List<T>()
-            ***REMOVED***
+            {
                 contact1, contact2, contact3
-    ***REMOVED***
+            };
 
             if (url.Contains("official"))
-            ***REMOVED***
+            {
                 this.CreateOffContact1(contact1);
                 this.CreateOffContact2(contact2);
                 this.CreateOffContact3(contact3);
-    ***REMOVED***
+            }
             else
-            ***REMOVED***
+            {
                 this.CreatePersContact1(contact1);
                 this.CreatePersContact2(contact2);
                 this.CreatePersContact3(contact3);
-    ***REMOVED***
+            }
 
             return list;
-***REMOVED***
+        }
 
         private static void CreateOrg1(object org)
-        ***REMOVED***
+        {
             PropOrgName.SetValue(org, "SKD TEST DLS 022");
             PropOrgLastChanged.SetValue(org, new DateTime(2012, 03, 08));
             PropOrgType.SetValue(org, "DA");
             PropOrgOfficialContact.SetValue(org, "https://tt02.altinn.basefarm.net/api/serviceowner/organizations/070238225/officialcontacts");
             PropOrgPersonalContact.SetValue(org, "https://tt02.altinn.basefarm.net/api/serviceowner/organizations/070238225/personalcontacts");
             PropOrgOrganizationNumber.SetValue(org, "070238225");
-***REMOVED***
+        }
 
         private static void CreateOrg2(object org)
-        ***REMOVED***
+        {
             PropOrgName.SetValue(org, "SVATSUM OG JAR");
             PropOrgLastChanged.SetValue(org, new DateTime(2010, 01, 01));
             PropOrgType.SetValue(org, "ANS");
             PropOrgOfficialContact.SetValue(org, "https://tt02.altinn.basefarm.net/api/serviceowner/organizations/010007690/officialcontacts");
             PropOrgPersonalContact.SetValue(org, "https://tt02.altinn.basefarm.net/api/serviceowner/organizations/010007690/personalcontacts");
             PropOrgOrganizationNumber.SetValue(org, "010007690");
-***REMOVED***
+        }
 
         private static void CreateOrg3(object org)
-        ***REMOVED***
+        {
             PropOrgName.SetValue(org, "RISDAL OG KVAMSØY");
             PropOrgLastChanged.SetValue(org, new DateTime(2014, 07, 01));
             PropOrgType.SetValue(org, "IS");
             PropOrgOfficialContact.SetValue(org, "https://tt02.altinn.basefarm.net/api/serviceowner/organizations/010007763/officialcontacts");
             PropOrgPersonalContact.SetValue(org, "https://tt02.altinn.basefarm.net/api/serviceowner/organizations/010007763/personalcontacts");
             PropOrgOrganizationNumber.SetValue(org, "010007763");
-***REMOVED***
+        }
 
         private void CreateOrg4(object org)
-        ***REMOVED***
+        {
             PropOrgName.SetValue(org, "SKARTVEIT OG NITTEDAL");
             PropOrgLastChanged.SetValue(org, new DateTime(2015, 12, 20));
             PropOrgType.SetValue(org, "IS");
             PropOrgOfficialContact.SetValue(org, "https://tt02.altinn.basefarm.net/api/serviceowner/organizations/010007828/officialcontacts");
             PropOrgPersonalContact.SetValue(org, "https://tt02.altinn.basefarm.net/api/serviceowner/organizations/010007828/personalcontacts");
             PropOrgOrganizationNumber.SetValue(org, "010007828");
-***REMOVED***
+        }
 
         private void CreateOffContact1(object offcont)
-        ***REMOVED***
+        {
             PropOffContEmail.SetValue(offcont, "petter@gmail.com");
             PropOffContEmailChanged.SetValue(offcont, new DateTime(2009, 06, 06));
             PropOffContPhone.SetValue(offcont, "12121313");
             PropOffContPhoneChanged.SetValue(offcont, new DateTime(2007, 12, 24));
-***REMOVED***
+        }
 
         private void CreateOffContact2(object offcont)
-        ***REMOVED***
+        {
             PropOffContEmail.SetValue(offcont, "pål@gmail.com");
             PropOffContEmailChanged.SetValue(offcont, new DateTime(2014, 01, 18));
             PropOffContPhone.SetValue(offcont, "12121414");
             PropOffContPhoneChanged.SetValue(offcont, new DateTime(2012, 11, 11));
-***REMOVED***
+        }
 
         private void CreateOffContact3(object offcont)
-        ***REMOVED***
+        {
             PropOffContEmail.SetValue(offcont, "espen@gmail.com");
             PropOffContEmailChanged.SetValue(offcont, new DateTime(2016, 10, 04));
             PropOffContPhone.SetValue(offcont, "12121515");
             PropOffContPhoneChanged.SetValue(offcont, new DateTime(2016, 10, 04));
-***REMOVED***
+        }
 
         private void CreatePersContact1(object cont)
-        ***REMOVED***
+        {
             PropPersContEmail.SetValue(cont, "rolf-bjørn@gmail.com");
             PropPersContEmailChanged.SetValue(cont, new DateTime(2009, 06, 06));
             PropPersContPhone.SetValue(cont, "47419641");
@@ -197,10 +197,10 @@ namespace RestClient
             PropPersContPersonalContactId.SetValue(cont, "r50022994");
             PropPersContSocialSecurityNumber.SetValue(cont, "06117701547");
             PropPersContName.SetValue(cont, "ROLF BJØRN");
-***REMOVED***
+        }
 
         private void CreatePersContact2(object cont)
-        ***REMOVED***
+        {
             PropPersContEmail.SetValue(cont, "drage@gmail.com");
             PropPersContEmailChanged.SetValue(cont, new DateTime(2015, 02, 14));
             PropPersContPhone.SetValue(cont, "98008410");
@@ -208,10 +208,10 @@ namespace RestClient
             PropPersContPersonalContactId.SetValue(cont, "r50041943");
             PropPersContSocialSecurityNumber.SetValue(cont, "11106700992");
             PropPersContName.SetValue(cont, "DRAGE TARALD");
-***REMOVED***
+        }
 
         private void CreatePersContact3(object cont)
-        ***REMOVED***
+        {
             PropPersContEmail.SetValue(cont, "donald-duck@gmail.com");
             PropPersContEmailChanged.SetValue(cont, new DateTime(1966, 01, 01));
             PropPersContPhone.SetValue(cont, "13131313");
@@ -219,6 +219,6 @@ namespace RestClient
             PropPersContPersonalContactId.SetValue(cont, "r13042941");
             PropPersContSocialSecurityNumber.SetValue(cont, "06128801558");
             PropPersContName.SetValue(cont, "DONALD DUCK TRUMP");
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

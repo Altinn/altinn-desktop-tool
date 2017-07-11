@@ -201,7 +201,7 @@ Kontakt Erlend Oksvoll (eok@brreg.no) ved spørsmål!</value>
     <value>Det oppstod en feil relatert til autorisasjon. Forsøk igjen.</value>
   </data>
   <data name="SearchLabelResultat" xml:space="preserve">
-    <value>Søker etter ***REMOVED***0***REMOVED***</value>
+    <value>Søker etter {0}</value>
   </data>
   <data name="SelectAll" xml:space="preserve">
     <value>Velg alle</value>

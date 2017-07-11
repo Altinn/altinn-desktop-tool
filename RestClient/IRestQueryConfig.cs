@@ -1,38 +1,38 @@
 ﻿namespace RestClient
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// The Query configuration as required by the RestQuery component.
-***REMOVED***
+    /// </summary>
     public interface IRestQueryConfig
-    ***REMOVED***
-    ***REMOVED***
-***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
+        /// Gets or sets the base address for the REST api for the environment that this configuration is connected to.
+        /// </summary>
         /// <remarks>
         /// When the url is like: <code>https://host/x/y/organizations/orgno</code> and organizations is the name of the controller,
         /// then the base address must be <code>https://host/x/y/</code> including the ending '/'.
         /// The BaseAddress may be changed, in which case AltinnRestClient will reconnect to new host on next call.
         /// </remarks>
-        string BaseAddress ***REMOVED*** get; set; ***REMOVED***
+        string BaseAddress { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the ApiKey to be used by the client. 
-    ***REMOVED***
-        string ApiKey ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        string ApiKey { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the thumbprint of the certificate required to authenticate as service owner.
-    ***REMOVED***
-        string ThumbPrint ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        string ThumbPrint { get; set; }
 
-    ***REMOVED***
-***REMOVED***
-    ***REMOVED***
-        bool IgnoreSslErrors ***REMOVED*** get; set; ***REMOVED***
+        /// <summary>
+        /// Gets or sets a value indicating whether the client should ignore SSL errors.
+        /// </summary>
+        bool IgnoreSslErrors { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the timeout for a request in seconds.
-    ***REMOVED***
-        int Timeout ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        int Timeout { get; set; }
+    }
+}

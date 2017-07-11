@@ -30,7 +30,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AltinnDesktopTool\AltinnDesktopTool.csproj">
       <Name>AltinnDesktopTool</Name>
-      <Project>***REMOVED***11bcd26a-9604-4b02-bccf-f85c693f685f***REMOVED***</Project>
+      <Project>{11bcd26a-9604-4b02-bccf-f85c693f685f}</Project>
       <Private>True</Private>
       <DoNotHarvest>True</DoNotHarvest>
       <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>

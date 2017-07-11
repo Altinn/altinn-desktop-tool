@@ -17,16 +17,16 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="91,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Center"/>
         <Image x:Name="image" Source="Images\a-logo-blue.png" Margin="10,20,10,10" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <!--
-        <Button Width="40" Height="40" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top" Style="***REMOVED***DynamicResource MetroCircleButtonStyle***REMOVED***">
+        <Button Width="40" Height="40" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{DynamicResource MetroCircleButtonStyle}">
             <Rectangle Width="30" Height="30">
                 <Rectangle.Fill>
                     <VisualBrush Stretch="Fill"
-                    Visual="***REMOVED***StaticResource appbar_information_circle***REMOVED***" />
+                    Visual="{StaticResource appbar_information_circle}" />
                 </Rectangle.Fill>
             </Rectangle>
         </Button>
         
-        <Button x:Name="button" Content="i" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top" Width="29" IsDefault="True" Custom:TextBoxHelper.IsClearTextButtonBehaviorEnabled="True" Custom:ButtonHelper.PreserveTextCase="True" Style="***REMOVED***DynamicResource MetroCircleButtonStyle***REMOVED***"/>
+        <Button x:Name="button" Content="i" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top" Width="29" IsDefault="True" Custom:TextBoxHelper.IsClearTextButtonBehaviorEnabled="True" Custom:ButtonHelper.PreserveTextCase="True" Style="{DynamicResource MetroCircleButtonStyle}"/>
         -->
     </Grid>
 </UserControl>

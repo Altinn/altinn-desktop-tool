@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>***REMOVED***2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151***REMOVED***</ProjectGuid>
+    <ProjectGuid>{2BE6FFDE-EA7E-47EA-8EEE-1BE75869C151}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AltinnDesktopToolTest</RootNamespace>
@@ -85,11 +85,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AltinnDesktopTool\AltinnDesktopTool.csproj">
-      <Project>***REMOVED***11bcd26a-9604-4b02-bccf-f85c693f685f***REMOVED***</Project>
+      <Project>{11bcd26a-9604-4b02-bccf-f85c693f685f}</Project>
       <Name>AltinnDesktopTool</Name>
     </ProjectReference>
     <ProjectReference Include="..\RestClient\RestClient.csproj">
-      <Project>***REMOVED***bf6fb931-d0c9-48a4-9e9d-15eb71b0f13e***REMOVED***</Project>
+      <Project>{bf6fb931-d0c9-48a4-9e9d-15eb71b0f13e}</Project>
       <Name>RestClient</Name>
     </ProjectReference>
   </ItemGroup>
@@ -97,7 +97,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="***REMOVED***82A7F48D-3B50-4B1E-B82E-3ADA8210C358***REMOVED***" />
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -3,25 +3,25 @@
 using AutoMapper;
 
 namespace AltinnDesktopTool.Utils.Helpers
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Helper class for AutoMapper
-***REMOVED***
+    /// </summary>
     public class AutoMapperHelper
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Create the mapper
-    ***REMOVED***
+        /// </summary>
         /// <returns>The IMapper object</returns>
         public static IMapper RunCreateMaps()
-        ***REMOVED***
+        {
             // Add profiles here
             Mapper.Initialize(cfg =>
-            ***REMOVED***
+            {
                 cfg.AddProfile<SearchMapperProfile>();
-    ***REMOVED***);
+            });
 
             return Mapper.Configuration.CreateMapper();
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

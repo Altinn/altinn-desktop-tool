@@ -8,7 +8,7 @@
              xmlns:view="clr-namespace:AltinnDesktopTool.View"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="600"
-             DataContext="***REMOVED***Binding SearchResultViewModel, Source=***REMOVED***StaticResource ViewModelLocator***REMOVED******REMOVED***">
+             DataContext="{Binding SearchResultViewModel, Source={StaticResource ViewModelLocator}}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -18,65 +18,65 @@
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="OrganizationGrid" IsReadOnly="True" ItemsSource="***REMOVED***Binding Model.ResultCollection***REMOVED***" Margin="10,10,10,20" GridLinesVisibility="All" AlternationCount="2" AutoGenerateColumns="False" BorderThickness="0" SelectionMode="Single" SelectionUnit="FullRow">
+        <DataGrid x:Name="OrganizationGrid" IsReadOnly="True" ItemsSource="{Binding Model.ResultCollection}" Margin="10,10,10,20" GridLinesVisibility="All" AlternationCount="2" AutoGenerateColumns="False" BorderThickness="0" SelectionMode="Single" SelectionUnit="FullRow">
             <DataGrid.Columns>
 
-                <DataGridTextColumn Header="***REMOVED***x:Static view:Resources.OrganizationGridColumnName***REMOVED***" Binding="***REMOVED***Binding Name***REMOVED***" Width="*"/>
-                <DataGridTextColumn Header="***REMOVED***x:Static view:Resources.OrganizationGridColumnOrganizationNumber***REMOVED***" Binding="***REMOVED***Binding OrganizationNumber***REMOVED***" Width="200"/>
-                <DataGridTextColumn Header="***REMOVED***x:Static view:Resources.OrganizationGridColumnType***REMOVED***" Binding="***REMOVED***Binding Type***REMOVED***" Width="60"/>
+                <DataGridTextColumn Header="{x:Static view:Resources.OrganizationGridColumnName}" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="{x:Static view:Resources.OrganizationGridColumnOrganizationNumber}" Binding="{Binding OrganizationNumber}" Width="200"/>
+                <DataGridTextColumn Header="{x:Static view:Resources.OrganizationGridColumnType}" Binding="{Binding Type}" Width="60"/>
 
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.Header>
-                        <CheckBox IsChecked="***REMOVED***Binding DataContext.Model.SelectAllChecked, RelativeSource=***REMOVED***RelativeSource Mode=FindAncestor, AncestorType=DataGrid***REMOVED******REMOVED***" ToolTip="***REMOVED***x:Static view:Resources.SelectAll***REMOVED***"  />
+                        <CheckBox IsChecked="{Binding DataContext.Model.SelectAllChecked, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}" ToolTip="{x:Static view:Resources.SelectAll}"  />
                     </DataGridTemplateColumn.Header>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <CheckBox PreviewMouseDown="UIElement_OnPreviewMouseDown" HorizontalAlignment="Center" 
-                                      IsChecked="***REMOVED***Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged***REMOVED***"
-                                      Command="***REMOVED***Binding DataContext.ItemChecked,RelativeSource=***REMOVED***RelativeSource Mode=Self***REMOVED******REMOVED***" />
+                                      IsChecked="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                      Command="{Binding DataContext.ItemChecked,RelativeSource={RelativeSource Mode=Self}}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
             <DataGrid.RowStyle>
-                <Style BasedOn="***REMOVED***StaticResource MetroDataGridRow***REMOVED***" TargetType="***REMOVED***x:Type DataGridRow***REMOVED***">
+                <Style BasedOn="{StaticResource MetroDataGridRow}" TargetType="{x:Type DataGridRow}">
                     <Style.Triggers>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Background" Value="***REMOVED***DynamicResource AccentBaseColorBrush***REMOVED***"></Setter>
+                            <Setter Property="Background" Value="{DynamicResource AccentBaseColorBrush}"></Setter>
                         </Trigger>
                     </Style.Triggers>
                 </Style>
             </DataGrid.RowStyle>
             <DataGrid.Style>
-                <Style BasedOn="***REMOVED***StaticResource MetroDataGrid***REMOVED***" TargetType="***REMOVED***x:Type DataGrid***REMOVED***">
+                <Style BasedOn="{StaticResource MetroDataGrid}" TargetType="{x:Type DataGrid}">
                     <Setter Property="AlternatingRowBackground"
-                    Value="***REMOVED***DynamicResource GrayBrush10***REMOVED***" />
+                    Value="{DynamicResource GrayBrush10}" />
                 </Style>
             </DataGrid.Style>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
-                    <i:InvokeCommandAction Command="***REMOVED***Binding GetContactsCommand***REMOVED***" 
-                        CommandParameter="***REMOVED***Binding Path=SelectedItem, RelativeSource=***REMOVED***RelativeSource Mode=FindAncestor, AncestorType=DataGrid***REMOVED******REMOVED***" />
+                    <i:InvokeCommandAction Command="{Binding GetContactsCommand}" 
+                        CommandParameter="{Binding Path=SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
                     <Border BorderThickness="1" Padding="10">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="***REMOVED***x:Static view:Resources.PersonalContactsTitle***REMOVED***"/>
-                            <DataGrid x:Name="PersonalContactsGrid" ItemsSource="***REMOVED***Binding PersonalContactsCollection***REMOVED***" GridLinesVisibility="All" IsReadOnly="True" SelectionUnit="FullRow" AutoGenerateColumns="False">
+                            <TextBlock Text="{x:Static view:Resources.PersonalContactsTitle}"/>
+                            <DataGrid x:Name="PersonalContactsGrid" ItemsSource="{Binding PersonalContactsCollection}" GridLinesVisibility="All" IsReadOnly="True" SelectionUnit="FullRow" AutoGenerateColumns="False">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="***REMOVED***x:Static view:Resources.PersonalContactsGridColumnName***REMOVED***" Binding="***REMOVED***Binding Name***REMOVED***"/>
-                                    <DataGridTextColumn Header="***REMOVED***x:Static view:Resources.PersonalContactsGridColumnSsn***REMOVED***" Binding="***REMOVED***Binding SocialSecurityNumber***REMOVED***"/>
-                                    <DataGridTextColumn Header="***REMOVED***x:Static view:Resources.PersonalContactsGridColumnMobile***REMOVED***" Binding="***REMOVED***Binding MobileNumber***REMOVED***"/>
-                                    <DataGridTextColumn Header="***REMOVED***x:Static view:Resources.PersonalContactsGridColumnEmail***REMOVED***" Binding="***REMOVED***Binding EmailAddress***REMOVED***"/>
+                                    <DataGridTextColumn Header="{x:Static view:Resources.PersonalContactsGridColumnName}" Binding="{Binding Name}"/>
+                                    <DataGridTextColumn Header="{x:Static view:Resources.PersonalContactsGridColumnSsn}" Binding="{Binding SocialSecurityNumber}"/>
+                                    <DataGridTextColumn Header="{x:Static view:Resources.PersonalContactsGridColumnMobile}" Binding="{Binding MobileNumber}"/>
+                                    <DataGridTextColumn Header="{x:Static view:Resources.PersonalContactsGridColumnEmail}" Binding="{Binding EmailAddress}"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <TextBlock Text="***REMOVED***x:Static view:Resources.OfficialContactsTitle***REMOVED***"/>
-                            <DataGrid x:Name="OfficialContactsGrid" ItemsSource="***REMOVED***Binding OfficalContactsCollection***REMOVED***" GridLinesVisibility="All" IsReadOnly="True" SelectionUnit="FullRow" AutoGenerateColumns="False">
+                            <TextBlock Text="{x:Static view:Resources.OfficialContactsTitle}"/>
+                            <DataGrid x:Name="OfficialContactsGrid" ItemsSource="{Binding OfficalContactsCollection}" GridLinesVisibility="All" IsReadOnly="True" SelectionUnit="FullRow" AutoGenerateColumns="False">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="***REMOVED***x:Static view:Resources.OfficialContactsGridColumnEmail***REMOVED***" Binding="***REMOVED***Binding EmailAddress***REMOVED***"/>
-                                    <DataGridTextColumn Header="***REMOVED***x:Static view:Resources.OfficialContactsGridColumnMobile***REMOVED***" Binding="***REMOVED***Binding MobileNumber***REMOVED***"/>
+                                    <DataGridTextColumn Header="{x:Static view:Resources.OfficialContactsGridColumnEmail}" Binding="{Binding EmailAddress}"/>
+                                    <DataGridTextColumn Header="{x:Static view:Resources.OfficialContactsGridColumnMobile}" Binding="{Binding MobileNumber}"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                         </StackPanel>
@@ -84,27 +84,27 @@
                 </DataTemplate>
             </DataGrid.RowDetailsTemplate>
         </DataGrid>
-        <TextBlock Grid.Row="0"  FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Center" Text="***REMOVED***Binding Model.InfoText***REMOVED***" Visibility="***REMOVED***Binding Path=Model.EmptyMessageVisibility, Converter=***REMOVED***StaticResource BoolToVisability***REMOVED******REMOVED***"/>
-        <controls:ProgressRing IsActive="***REMOVED***Binding Model.IsBusy***REMOVED***" />
-        <Border Grid.Row="1" Margin="0,0,0,0" Background="***REMOVED***DynamicResource AccentColorBrush2***REMOVED***" />
-        <Button Grid.Row="1" Command="***REMOVED***Binding CopyToClipboardExcelFormatCommand***REMOVED***" ToolTip="***REMOVED***x:Static view:Resources.CopyToExcelTooltip***REMOVED***" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,40,0" Style="***REMOVED***DynamicResource AccentedSquareButtonStyle***REMOVED***">
+        <TextBlock Grid.Row="0"  FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Center" Text="{Binding Model.InfoText}" Visibility="{Binding Path=Model.EmptyMessageVisibility, Converter={StaticResource BoolToVisability}}"/>
+        <controls:ProgressRing IsActive="{Binding Model.IsBusy}" />
+        <Border Grid.Row="1" Margin="0,0,0,0" Background="{DynamicResource AccentColorBrush2}" />
+        <Button Grid.Row="1" Command="{Binding CopyToClipboardExcelFormatCommand}" ToolTip="{x:Static view:Resources.CopyToExcelTooltip}" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,40,0" Style="{DynamicResource AccentedSquareButtonStyle}">
             <StackPanel Orientation="Horizontal">
                 <Rectangle x:Name="rectButtonCopyExcel" Width="40" Height="40" 
-               Fill="***REMOVED***Binding RelativeSource=***REMOVED***RelativeSource AncestorType=Button***REMOVED***, Path=Foreground***REMOVED***">
+               Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
                     <Rectangle.OpacityMask>
                         <VisualBrush Stretch="Fill"
-                     Visual="***REMOVED***DynamicResource appbar_page_excel***REMOVED***" />
+                     Visual="{DynamicResource appbar_page_excel}" />
                     </Rectangle.OpacityMask>
                 </Rectangle>
             </StackPanel>
         </Button>
-        <Button Grid.Row="1" Command="***REMOVED***Binding CopyToClipboardPlainTextCommand***REMOVED***" ToolTip="***REMOVED***x:Static view:Resources.CopyPlainTextTooltip***REMOVED***" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,110,0" Style="***REMOVED***DynamicResource AccentedSquareButtonStyle***REMOVED***">
+        <Button Grid.Row="1" Command="{Binding CopyToClipboardPlainTextCommand}" ToolTip="{x:Static view:Resources.CopyPlainTextTooltip}" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,110,0" Style="{DynamicResource AccentedSquareButtonStyle}">
             <StackPanel Orientation="Horizontal">
                 <Rectangle x:Name="rectButtonCopy" Width="40" Height="40" 
-               Fill="***REMOVED***Binding RelativeSource=***REMOVED***RelativeSource AncestorType=Button***REMOVED***, Path=Foreground***REMOVED***">
+               Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
                     <Rectangle.OpacityMask>
                         <VisualBrush Stretch="Fill"
-                     Visual="***REMOVED***DynamicResource appbar_clipboard_paste***REMOVED***" />
+                     Visual="{DynamicResource appbar_clipboard_paste}" />
                     </Rectangle.OpacityMask>
                 </Rectangle>
             </StackPanel>

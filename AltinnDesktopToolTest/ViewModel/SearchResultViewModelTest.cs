@@ -1,4 +1,4 @@
-***REMOVED***
+﻿using System;
 using System.Collections.ObjectModel;
 using System.Windows.Forms;
 
@@ -10,52 +10,52 @@ using AutoMapper;
 
 using log4net;
 
-***REMOVED***
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Moq;
 
-***REMOVED***
-***REMOVED***
+using RestClient;
+using RestClient.DTO;
 
 namespace AltinnDesktopToolTest.ViewModel
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Test class for unit tests of the <see cref="SearchResultViewModel"/> class.
-***REMOVED***
-***REMOVED***
+    /// </summary>
+    [TestClass]
     public class SearchResultViewModelTest
-    ***REMOVED***
+    {
         private static IMapper mapper;
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the test context for the current test.
-    ***REMOVED***
-        public TestContext TestContext ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public TestContext TestContext { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Initialize the test class. This ensures that <see cref="AutoMapper"/> has been properly configured for all test methods and
         /// that logic performs actual mapping instead of having the mapping mocked.
-    ***REMOVED***
+        /// </summary>
         /// <param name="context">The current <see cref="TestContext"/> for the test class.</param>
         [ClassInitialize]
         public static void ClassInit(TestContext context)
-        ***REMOVED***
+        {
             mapper = AutoMapperHelper.RunCreateMaps();
-***REMOVED***
+        }
 
-    ***REMOVED***
-***REMOVED***
+        /// <summary>
+        /// Scenario: 
         ///   Runs the CopyToClipboardExcelFormatHandler of the searchResultViewModel object.
-***REMOVED***
+        /// Expected Result: 
         ///   The text on the clipboard has the correct excel format.
-***REMOVED***
+        /// Success Criteria: 
         ///   The text on the clipboard matches the hardcoded "expectedResult" string.
-    ***REMOVED***
-***REMOVED***
+        /// </summary>
+        [TestMethod]
         [TestCategory("ViewModel")]
         public void SearchResultViewModelTest_CopyToExcel_TextInExcelFormat()
-        ***REMOVED***
-***REMOVED***
+        {
+            // Arrange
             Mock<ILog> logger = new Mock<ILog>();
 
             Mock<IRestQuery> query = new Mock<IRestQuery>();
@@ -67,40 +67,40 @@ namespace AltinnDesktopToolTest.ViewModel
             SearchResultViewModel searchResultViewModel = new SearchResultViewModel(logger.Object, mapper, query.Object);
 
             OrganizationModel organizationModel = new OrganizationModel
-            ***REMOVED***
+            {
                 Name = "LER OG HEREFOSS",
                 Type = "AS",
                 IsSelected = true,
                 OrganizationNumber = "910570919",
                 OfficialContacts = "https://www.altinn.no/api/serviceowner/organizations/910570919/officialcontacts"
-    ***REMOVED***
+            };
             searchResultViewModel.Model.ResultCollection.Add(organizationModel);
 
             ObservableCollection<OfficialContact> officialContacts = new ObservableCollection<OfficialContact>
-            ***REMOVED***
+            {
                 new OfficialContact
-                ***REMOVED***
+                {
                     EmailAddress = "aen@brreg.no"
-        ***REMOVED***,
+                },
                 new OfficialContact()
-                ***REMOVED***
+                {
                     MobileNumber = "98008410",
                     EmailAddress = "aina.engen70@gmail.com"
-        ***REMOVED***,
+                },
                 new OfficialContact()
-                ***REMOVED***
+                {
                     MobileNumber = "98008410",
                     EmailAddress = "aina.engen@brreg.no"
-        ***REMOVED***
-    ***REMOVED***
+                }
+            };
 
             query.Setup(s => s.GetByLink<OfficialContact>(It.Is<string>(url => url == organizationModel.OfficialContacts))).Returns(officialContacts);
 
-***REMOVED***
+            // Act
             searchResultViewModel.CopyToClipboardExcelFormatHandler();
 
-***REMOVED***
+            // Assert
             Assert.AreEqual(expectedResult, Clipboard.GetText());
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

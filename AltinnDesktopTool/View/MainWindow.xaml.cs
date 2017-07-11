@@ -2,23 +2,23 @@
 using MahApps.Metro.Controls.Dialogs;
 
 namespace AltinnDesktopTool.View
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Interaction logic for MainWindow.xaml
-***REMOVED***
+    /// </summary>
     public partial class MainWindow
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Initializes a new instance of the MainWindow class.
-    ***REMOVED***
+        /// </summary>
         public MainWindow()
-        ***REMOVED***
+        {
             this.InitializeComponent();
-***REMOVED***
+        }
 
         private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        ***REMOVED***
+        {
             await this.ShowMessageAsync(View.Resources.HeaderText, View.Resources.InfoText);
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

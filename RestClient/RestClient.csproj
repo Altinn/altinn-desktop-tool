@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>***REMOVED***BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E***REMOVED***</ProjectGuid>
+    <ProjectGuid>{BF6FB931-D0C9-48A4-9E9D-15EB71B0F13E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RestClient</RootNamespace>

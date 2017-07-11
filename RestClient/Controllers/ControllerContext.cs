@@ -1,25 +1,25 @@
 ﻿using log4net;
 
 namespace RestClient.Controllers
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// The required data for the controller.
-***REMOVED***
+    /// </summary>
     public class ControllerContext
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Gets or sets the log4net Log object, may be null.
-    ***REMOVED***
-        public ILog Log ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public ILog Log { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the Http wrapper for REST calls to Altinn server.
-    ***REMOVED***
-        public AltinnRestClient RestClient ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public AltinnRestClient RestClient { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the base address for this controller including the controller name.
-    ***REMOVED***
-        public string ControllerBaseAddress ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        public string ControllerBaseAddress { get; set; }
+    }
+}

@@ -1,31 +1,31 @@
-***REMOVED***
+﻿using System;
 
 namespace RestClient.DTO
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Data transfer object representing an official contact from the service owner API.
-***REMOVED***
+    /// </summary>
     [PluralName("OfficialContacts")]
     public class OfficialContact : HalJsonResource
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Gets or sets the mobile number of the official contact.
-    ***REMOVED***
-        public string MobileNumber ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string MobileNumber { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the date for the last time the mobile number was added or changed.
-    ***REMOVED***
-        public DateTime? MobileNumberChanged ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public DateTime? MobileNumberChanged { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the email address of the official contact.
-    ***REMOVED***
-        public string EmailAddress ***REMOVED*** get; set; ***REMOVED***
+        /// </summary>
+        public string EmailAddress { get; set; }
 
-    ***REMOVED***
+        /// <summary>
         /// Gets or sets the date for the last time the email address was added or changed.
-    ***REMOVED***
-        public DateTime? EmailAddressChanged ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        /// </summary>
+        public DateTime? EmailAddressChanged { get; set; }
+    }
+}

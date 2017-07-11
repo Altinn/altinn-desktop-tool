@@ -1,33 +1,33 @@
 ﻿namespace AltinnDesktopTool.Utils.PubSub
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Static class containing the registered events used
-***REMOVED***
+    /// </summary>
     public static class EventNames
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Search event
-    ***REMOVED***
+        /// </summary>
         public static readonly string SearchResultReceivedEvent = "SearchResultReceivedEvent";
 
-    ***REMOVED***
+        /// <summary>
         /// Environment Changed Event
-    ***REMOVED***
+        /// </summary>
         public static readonly string EnvironmentChangedEvent = "EnvironmentChangedEvent";
 
-    ***REMOVED***
+        /// <summary>
         /// Search StartedEvent
-    ***REMOVED***
+        /// </summary>
         public static readonly string SearchStartedEvent = "SearchStartedEvent";
 
-    ***REMOVED***
+        /// <summary>
         /// Organization Selected Changed Event
-    ***REMOVED***
+        /// </summary>
         public static readonly string OrganizationSelectedChangedEvent = "OrganizationSelectedChangedEvent";
         
-    ***REMOVED***
+        /// <summary>
         /// Organization Selected Changed All Event
-    ***REMOVED***
+        /// </summary>
         public static readonly string OrganizationSelectedAllChangedEvent = "OrganizationSelectedAllChangedEvent";
-***REMOVED***
-***REMOVED***
+    }
+}

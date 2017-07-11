@@ -1,16 +1,16 @@
 ﻿namespace AltinnDesktopTool.View
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Interaction logic for SearchOrganizationInformation.xaml
-***REMOVED***
+    /// </summary>
     public partial class SearchOrganizationInformation
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// Initializes a new instance of the SearchOrganizationInformation class.
-    ***REMOVED***
+        /// </summary>
         public SearchOrganizationInformation()
-        ***REMOVED***
+        {
             this.InitializeComponent();
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

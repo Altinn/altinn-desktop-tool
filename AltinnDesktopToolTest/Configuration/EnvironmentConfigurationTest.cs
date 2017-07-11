@@ -1,35 +1,35 @@
-﻿***REMOVED***
+﻿using System.Collections.Generic;
 
 using AltinnDesktopTool.Configuration;
 
-***REMOVED***
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AltinnDesktopToolTest.Configuration
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// Test class for unit tests of the <see cref="EnvironmentConfigurationManager"/> class.
-***REMOVED***
-***REMOVED***
+    /// </summary>
+    [TestClass]
     public class EnvironmentConfigurationTest
-    ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+    {
+        /// <summary>
+        /// Scenario: 
         ///   Access environment configurations.
-***REMOVED***
+        /// Expected Result: 
         ///   Configuration settings are loaded from the file and returned.
-***REMOVED***
+        /// Success Criteria: 
         ///   The configuration object is not null and contains at least one environment.
-    ***REMOVED***
-***REMOVED***
+        /// </summary>
+        [TestMethod]
         public void EnvironmentConfigurationsTest_LoadTest()
-        ***REMOVED***
-***REMOVED***
-***REMOVED***
+        {
+            // Arrange
+            // Act
             List<EnvironmentConfiguration> configs = EnvironmentConfigurationManager.EnvironmentConfigurations;
 
-***REMOVED***
+            // Assert
             Assert.IsNotNull(configs);
             Assert.IsTrue(configs.Count > 0);
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

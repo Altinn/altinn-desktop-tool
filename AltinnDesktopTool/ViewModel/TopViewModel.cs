@@ -1,11 +1,11 @@
 ﻿using GalaSoft.MvvmLight;
 
 namespace AltinnDesktopTool.ViewModel
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// ViewModel for TopView
-***REMOVED***
+    /// </summary>
     public class TopViewModel : ViewModelBase
-    ***REMOVED***
-***REMOVED***
-***REMOVED***
+    {
+    }
+}

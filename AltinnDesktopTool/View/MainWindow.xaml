@@ -8,17 +8,17 @@
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:command="http://www.galasoft.ch/mvvmlight"
-        Title="***REMOVED***x:Static view:Resources.ApplicationName***REMOVED***" Height="400.648" Width="400.559" MinWidth="460"
-        GlowBrush="***REMOVED***DynamicResource AccentColorBrush***REMOVED***"
+        Title="{x:Static view:Resources.ApplicationName}" Height="400.648" Width="400.559" MinWidth="460"
+        GlowBrush="{DynamicResource AccentColorBrush}"
         ResizeMode="CanResizeWithGrip"
         SaveWindowPosition="True" Icon="Images/altinnT.ico"
-        DataContext="***REMOVED***Binding Main, Source=***REMOVED***StaticResource ViewModelLocator***REMOVED******REMOVED***">
+        DataContext="{Binding Main, Source={StaticResource ViewModelLocator}}">
     <Window.Resources>
         <ResourceDictionary></ResourceDictionary>
     </Window.Resources>
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Closing">
-            <command:EventToCommand Command="***REMOVED***Binding ClosingWindowCommand***REMOVED***" PassEventArgsToCommand="True"/>
+            <command:EventToCommand Command="{Binding ClosingWindowCommand}" PassEventArgsToCommand="True"/>
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid >
@@ -41,9 +41,9 @@
 
             <Button Click="ButtonBase_OnClick">
                 <Rectangle Width="20" Height="20"
-                   Fill="***REMOVED***Binding RelativeSource=***REMOVED***RelativeSource AncestorType=Button***REMOVED***, Path=Foreground***REMOVED***">
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
                     <Rectangle.OpacityMask>
-                        <VisualBrush Stretch="Fill" Visual="***REMOVED***StaticResource appbar_information_circle***REMOVED***" />
+                        <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_information_circle}" />
                     </Rectangle.OpacityMask>
                 </Rectangle>
             </Button>

@@ -1,50 +1,50 @@
-***REMOVED***
+﻿using System;
 
 namespace RestClient.Resources
-***REMOVED***
-***REMOVED***
+{
+    /// <summary>
     /// All possible error codes from the REST client.
-***REMOVED***
+    /// </summary>
     public static class RestClientErrorCodes
-    ***REMOVED***
-    ***REMOVED***
+    {
+        /// <summary>
         /// The client has wrong or missing configuration values.
-    ***REMOVED***
+        /// </summary>
         public const string RestClientConfigurationError = "RestClientConfigurationError";
 
-    ***REMOVED***
+        /// <summary>
         /// The remote API returned something the client was unable to deserialize.
-    ***REMOVED***
+        /// </summary>
         public const string RestClientDeserialiationError = "RestClientDeserialiationError";
 
-    ***REMOVED***
+        /// <summary>
         /// The remote API returned a http status that the REST client is unable to handle.
-    ***REMOVED***
+        /// </summary>
         public const string RestClientUnableToHandleResponse = "RestClientUnableToHandleResponse";
 
-    ***REMOVED***
+        /// <summary>
         /// The remote API returned http status code 400 Bad Request.
-    ***REMOVED***
+        /// </summary>
         public const string RemoteApiReturnedStatusBadRequest = "RemoteApiReturnedStatusBadRequest";
 
-    ***REMOVED***
+        /// <summary>
         /// The remote API returned http status code 401 Unauthorized.
-    ***REMOVED***
+        /// </summary>
         public const string RemoteApiReturnedStatusUnauthorized = "RemoteApiReturnedStatusUnauthorized";
 
-    ***REMOVED***
+        /// <summary>
         /// The remote API returned http status code 403 Forbidden.
-    ***REMOVED***
+        /// </summary>
         public const string RemoteApiReturnedStatusForbidden = "RemoteApiReturnedStatusForbidden";
 
-    ***REMOVED***
+        /// <summary>
         /// The remote API returned http status code 404 Not Found.
-    ***REMOVED***
+        /// </summary>
         public const string RemoteApiReturnedStatusNotFound = "RemoteApiReturnedStatusNotFound";
 
-    ***REMOVED***
+        /// <summary>
         /// The remote API returned http status code 500 Internal Server Error.
-    ***REMOVED***
+        /// </summary>
         public const string RemoteApiReturnedStatusInternalServerError = "RemoteApiReturnedStatusInternalServerError";
-***REMOVED***
-***REMOVED***
+    }
+}
