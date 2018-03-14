@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-
 using RestClient.DTO;
 
 namespace RestClient
@@ -38,5 +37,13 @@ namespace RestClient
         /// <param name="id">The id of the object to retrieve</param>
         /// <returns>An object, possibly null if none found</returns>
         T Get<T>(string id) where T : HalJsonResource;
+
+        /// <summary>
+        /// Perform a REST API request based on the pattern: <code>{baseAddress}/{controller}?{key1}={value1}&{key2}={value2}</code>.
+        /// </summary>
+        /// <typeparam name="T">The type of object the controller should attempt to deserialize the json response into.</typeparam>
+        /// <param name="filter">The filter values for the search.</param>
+        /// <returns>A list of instances of the expected type.</returns>
+        IList<T> Get<T>(List<KeyValuePair<string, string>> filter) where T : HalJsonResource;
     }
 }

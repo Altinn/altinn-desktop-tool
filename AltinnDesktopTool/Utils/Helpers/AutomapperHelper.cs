@@ -1,5 +1,4 @@
 ﻿using AltinnDesktopTool.ViewModel.MapperProfiles;
-
 using AutoMapper;
 
 namespace AltinnDesktopTool.Utils.Helpers

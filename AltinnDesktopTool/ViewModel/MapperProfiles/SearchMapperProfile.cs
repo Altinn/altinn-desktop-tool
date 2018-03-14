@@ -15,6 +15,7 @@ namespace AltinnDesktopTool.ViewModel.MapperProfiles
             this.CreateMap<RestClient.DTO.Organization, Model.OrganizationModel>();
             this.CreateMap<RestClient.DTO.OfficialContact, Model.OfficialContactModel>();
             this.CreateMap<RestClient.DTO.PersonalContact, Model.PersonalContactModel>();
+            this.CreateMap<RestClient.DTO.Role, Model.RoleModel>();
         }
     }
 }

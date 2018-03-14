@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="AltinnDesktopTool.View.SearchRolesAndRightsInformation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:custom="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:view="clr-namespace:AltinnDesktopTool.View"
+             mc:Ignorable="d" 
+              d:DesignHeight="200" d:DesignWidth="515">
+    <UserControl.Resources>
+        <Style x:Key="FocusTextBox" TargetType="Grid">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=SubjectSearchText, Path=IsVisible}" Value="True">
+                    <Setter Property="FocusManager.FocusedElement" Value="{Binding ElementName=SubjectSearchText}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <Binding Path="SearchRolesAndRightsInformationViewModel" Source="{StaticResource ViewModelLocator}"/>
+    </UserControl.DataContext>
+    <Grid Style="{StaticResource FocusTextBox}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="{x:Static view:Resources.Subject}" Margin="5,10,0,0" Grid.Row="0" Height="28" Name="BaseLabel1" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox Name="SubjectSearchText" Grid.Row="1" Margin="10,0,10,10" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Model.SubjectSearchText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Label Content="{x:Static view:Resources.Reportee}" Margin="5,0,0,0" Grid.Row="2" Height="28" Name="BaseLabel2" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox Name="ReporteeSearchText" Grid.Row="3" Margin="10,0,10,10" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Model.ReporteeSearchText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Button Grid.Row="4" Margin="10,0,10,10" MinWidth="60" VerticalAlignment="Center" HorizontalAlignment="Left" IsDefault="True" Command="{Binding SearchCommand}" CommandParameter="{Binding Model}" Content="{x:Static view:Resources.SearchButtonText}" Style="{StaticResource AccentedSquareButtonStyle}" custom:ButtonHelper.PreserveTextCase="True"/>
+        <Label Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="{Binding Model.LabelText, Mode=OneWay}" Foreground="{Binding Model.LabelBrush, Mode=OneWay}" FontWeight="Bold"/>
+    </Grid>
+</UserControl>
+

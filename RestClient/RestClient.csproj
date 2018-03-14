@@ -59,6 +59,7 @@
     <Compile Include="DTO\HalJsonResource.cs" />
     <Compile Include="DTO\OfficialContact.cs" />
     <Compile Include="DTO\Organization.cs" />
+    <Compile Include="DTO\Role.cs" />
     <Compile Include="IRestQuery.cs" />
     <Compile Include="IRestQueryConfig.cs" />
     <Compile Include="DTO\PersonalContact.cs" />

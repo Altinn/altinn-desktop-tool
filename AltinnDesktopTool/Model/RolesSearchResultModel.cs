@@ -1,19 +1,19 @@
-﻿using System.Collections.ObjectModel;
-using AltinnDesktopTool.Utils.PubSub;
+﻿using AltinnDesktopTool.Utils.PubSub;
+using System.Collections.ObjectModel;
 
 namespace AltinnDesktopTool.Model
 {
     /// <summary>
-    /// Search Result Model
+    /// Roles Search Result Model
     /// </summary>
-    public class SearchResultModel : ModelBase
+    public class RolesSearchResultModel : ModelBase
     {
-        private ObservableCollection<OrganizationModel> resultCollection;
+        private ObservableCollection<RoleModel> resultCollection;
 
         private bool emptyMessageVisibility;
 
         private string infoText = string.Empty;
-        private bool selectAllChecked;
+        private bool rolesSelectAllChecked;
 
         /// <summary>
         /// Gets or sets a value indicating whether the Info text is visible in the result grid
@@ -51,9 +51,9 @@ namespace AltinnDesktopTool.Model
         }
 
         /// <summary>
-        /// Gets or sets the Result collection presented in the Organization grid
+        /// Gets or sets the Result collection presented in the role grid
         /// </summary>
-        public ObservableCollection<OrganizationModel> ResultCollection
+        public ObservableCollection<RoleModel> ResultCollection
         {
             get
             {
@@ -71,29 +71,29 @@ namespace AltinnDesktopTool.Model
         /// <summary>
         /// Gets or sets a value indicating whether all items are checked or not
         /// </summary>
-        public bool SelectAllChecked
+        public bool RolesSelectAllChecked
         {
             get
             {
-                return this.selectAllChecked;
+                return this.rolesSelectAllChecked;
             }
 
             set
             {
-                this.selectAllChecked = value;
-                this.RaisePropertyChanged(() => this.SelectAllChecked);
-                PubSub<SearchResultModel>.RaiseEvent(EventNames.OrganizationSelectedAllChangedEvent, this, new PubSubEventArgs<SearchResultModel>(this));
+                this.rolesSelectAllChecked = value;
+                this.RaisePropertyChanged(() => this.RolesSelectAllChecked);
+                PubSub<RolesSearchResultModel>.RaiseEvent(EventNames.RoleSelectedAllChangedEvent, this, new PubSubEventArgs<RolesSearchResultModel>(this));
             }
         }
 
         /// <summary>
-        /// Sets SelectAllChecked
+        /// Sets RolesSelectAllChecked
         /// </summary>
         /// <param name="value">boolean value</param>
         public void SetSelectAllChecked(bool value)
         {
-            this.selectAllChecked = false;
-            this.RaisePropertyChanged(() => this.SelectAllChecked);
+            this.rolesSelectAllChecked = false;
+            this.RaisePropertyChanged(() => this.RolesSelectAllChecked);
         }
     }
 }

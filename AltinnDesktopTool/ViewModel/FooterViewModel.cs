@@ -1,10 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-
 using AltinnDesktopTool.Configuration;
 using AltinnDesktopTool.Utils.PubSub;
-
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 

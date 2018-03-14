@@ -96,5 +96,30 @@ namespace RestClient.Test
             // Assert
             Assert.IsTrue(list.Count == 3, "Personal Contact stub failed");
         }
+
+        /// <summary>
+        /// Scenario: 
+        ///   Attempt to retrieve a list of roles given a spesific set of subject and reportee
+        /// Expected Result: 
+        ///   A list of roles.
+        /// Success Criteria: 
+        ///   The list of roles has exactly 2 entries.
+        /// </summary>
+        [TestMethod]
+        public void GetTest_FilterBySubjectReportee_ListOfRoles()
+        {
+            // Arrange
+            IRestQuery query = new RestQueryStub();
+
+            // Act
+            IList<Role> list = query.Get<Role>(new List<KeyValuePair<string, string>>
+            {
+                new KeyValuePair<string, string>("Subject", "16024400143"),
+                new KeyValuePair<string, string>("Reportee", "910028146")
+            });
+
+            // Assert
+            Assert.IsTrue(list.Count == 2, "Role stub failed");
+        }
     }
 }

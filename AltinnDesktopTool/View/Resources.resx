@@ -120,6 +120,9 @@
   <data name="ApplicationName" xml:space="preserve">
     <value />
   </data>
+  <data name="ContactInformationSearchLabel" xml:space="preserve">
+    <value>Mobilnummer / Epost / Organisasjonsnummer:</value>
+  </data>
   <data name="CopyPlainTextTooltip" xml:space="preserve">
     <value>Kopier til tekstformat</value>
   </data>
@@ -179,6 +182,21 @@ Kontakt Erlend Oksvoll (eok@brreg.no) ved spørsmål!</value>
   <data name="PhoneNumber" xml:space="preserve">
     <value>mobilnummer</value>
   </data>
+  <data name="Reportee" xml:space="preserve">
+    <value>Rollegiver (SSN/Organisasjonsnummer):</value>
+  </data>
+  <data name="RoleGridColumnRoleDefinitionId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="RoleGridColumnRoleDescription" xml:space="preserve">
+    <value>Beskrivelse</value>
+  </data>
+  <data name="RoleGridColumnRoleName" xml:space="preserve">
+    <value>Rolle</value>
+  </data>
+  <data name="RoleGridColumnRoleType" xml:space="preserve">
+    <value>Type</value>
+  </data>
   <data name="SearchButtonText" xml:space="preserve">
     <value>Søk</value>
   </data>
@@ -190,6 +208,9 @@ Kontakt Erlend Oksvoll (eok@brreg.no) ved spørsmål!</value>
   </data>
   <data name="SearchLabelErrorGeneralError" xml:space="preserve">
     <value>Det oppstod en ukjent feil under søket. </value>
+  </data>
+  <data name="SearchLabelErrorInvalidInput" xml:space="preserve">
+    <value>Søket inneholder ugyldig input</value>
   </data>
   <data name="SearchLabelErrorOrganizationNotFound" xml:space="preserve">
     <value>Søket ga en feilmelding som indikerer at organisasjonen ikke finnes.</value>
@@ -205,5 +226,14 @@ Kontakt Erlend Oksvoll (eok@brreg.no) ved spørsmål!</value>
   </data>
   <data name="SelectAll" xml:space="preserve">
     <value>Velg alle</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Rollehaver (SSN/Organisasjonsnummer):</value>
+  </data>
+  <data name="TabKontaktinformasjon" xml:space="preserve">
+    <value>Kontaktinformasjon</value>
+  </data>
+  <data name="TabRoller" xml:space="preserve">
+    <value>Roller</value>
   </data>
 </root>
