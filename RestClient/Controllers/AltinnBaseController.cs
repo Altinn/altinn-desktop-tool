@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using RestClient.Deserialize;
 using RestClient.DTO;
 
@@ -9,7 +8,8 @@ namespace RestClient.Controllers
     /// <summary>
     /// Generic Controller, currently supporting organizations. Extendible by adding additional attributes as long as the same URL pattern is used.
     /// </summary>
-    [RestQueryController(Name = "organizations", SupportedType = typeof(Organization))]
+    [RestQueryController(Name = "organizations", SupportedType = typeof(Organization)),
+       RestQueryController(Name = "authorization/roles", SupportedType = typeof(Role))]
     public class AltinnBaseController : IRestQueryController
     {
         /// <summary>
@@ -39,6 +39,23 @@ namespace RestClient.Controllers
         public IList<T> Get<T>(KeyValuePair<string, string> filter) where T : HalJsonResource
         {
             string url = $"{this.Context.ControllerBaseAddress}?ForceEIAuthentication&{filter.Key}={filter.Value}";
+            string result = this.Context.RestClient.Get(url);
+            return result != null ? Deserializer.DeserializeHalJsonResourceList<T>(result) : null;
+        }
+
+        /// <summary>
+        /// Perform a REST API request based on the pattern: <code>{baseAddress}/{controller}?{key1}={value1}&{key2}={value2}</code>.
+        /// </summary>
+        /// <typeparam name="T">The type of object the controller should attempt to deserialize the json response into.</typeparam>
+        /// <param name="filter">The filter values for the search.</param>
+        /// <returns>A list of instances of the expected type.</returns>
+        public IList<T> Get<T>(List<KeyValuePair<string, string>> filter) where T : HalJsonResource
+        {
+            string url = $"{this.Context.ControllerBaseAddress}?ForceEIAuthentication";
+            foreach (var item in filter)
+            {
+                url += $"&{item.Key}={item.Value}";
+            }
             string result = this.Context.RestClient.Get(url);
             return result != null ? Deserializer.DeserializeHalJsonResourceList<T>(result) : null;
         }

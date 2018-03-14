@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-
 using log4net;
-
 using RestClient.Controllers;
 using RestClient.DTO;
 using RestClient.Resources;
@@ -179,6 +177,47 @@ namespace RestClient
             try
             {
                 return controller.GetByLink<T>(url);
+            }
+            catch (Exception ex)
+            {
+                this.log.Error(ControllerExceptionText, ex);
+
+                if (ex is RestClientException)
+                {
+                    throw;
+                }
+
+                throw new RestClientException(ControllerExceptionText, ex);
+            }
+        }
+
+        /// <summary>
+        /// Search for a list of objects by filtering on a given list of name value pairs.
+        /// </summary>
+        /// <typeparam name="T">The object type being retrieved.</typeparam>
+        /// <param name="filter">The list of names and the values of the search parameters to be used in the search.</param>
+        /// <exception cref="RestClientException">
+        /// Any Exception from the controller is logged and thrown as RestClientException with InnerException being the caught Exception.
+        /// A RestClientException is also thrown when the controller could not be found supporting type T.
+        /// </exception>
+        /// <returns>A list of the identified elements matching the search criteria.</returns>
+        public IList<T> Get<T>(List<KeyValuePair<string, string>> filter) where T : HalJsonResource
+        {
+            this.EnsureAuthenticated();
+
+            IRestQueryController controller = this.GetControllerByType(typeof(T));
+
+            if (controller == null)
+            {
+                string err = string.Format(ControllerNotFoundForTypeException, typeof(T));
+                this.log.Error(err, null);
+
+                throw new RestClientException(err);
+            }
+
+            try
+            {
+                return controller.Get<T>(filter);
             }
             catch (Exception ex)
             {

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using RestClient;
 using RestClient.DTO;
 
@@ -60,7 +57,7 @@ namespace IntegrationUnitTest
         [TestCategory("Integration")]
         [TestCategory("RestClient")]
         [TestMethod]
-        [DataRow("eok@brreg.no")]        
+        [DataRow("eok@brreg.no")]
         [DataRow("aen@brreg.no")]
         public void GetOrgnizationsByEmailTest(string email)
         {
@@ -125,6 +122,38 @@ namespace IntegrationUnitTest
             // Assert
             Assert.IsNotNull(list);
             Assert.IsTrue(list.Count > 0);
+        }
+
+        /// <summary>
+        /// Scenario: 
+        ///   Attempt to retrieve roles based on a rolegiver and a rolereciver.
+        /// Expected Result: 
+        ///   A list of roles is returned.
+        /// Success Criteria: 
+        ///   A list of roles that has at least on entry.
+        /// </summary>
+        /// <param name="roleGiver">The rolegivers ssn or organization nr to retrieve.</param>
+        /// <param name="roleReciver">The role recivers organization nr or ssn.</param>
+        [TestCategory("Integration")]
+        [TestCategory("RestClient")]
+        [TestMethod]
+        [DataRow("16024400143", "910028146")]
+        public void GetRoleByRoleGiverAndRoleReciver(string roleGiver, string roleReciver)
+        {
+            // Arrange
+            IRestQuery query = new RestQuery(this.config);
+
+            // Act
+            IList<Role> roles = query.Get<Role>(new List<KeyValuePair<string, string>>
+                {
+                    new KeyValuePair<string, string>("Subject", roleGiver),
+                    new KeyValuePair<string, string>("Reportee", roleReciver)
+                });
+
+
+            // Assert
+            Assert.IsNotNull(roles);
+            Assert.IsTrue(roles.Count > 0);
         }
     }
 

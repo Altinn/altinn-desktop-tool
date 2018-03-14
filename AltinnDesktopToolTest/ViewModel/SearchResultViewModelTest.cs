@@ -1,19 +1,13 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Windows.Forms;
-
 using AltinnDesktopTool.Model;
 using AltinnDesktopTool.Utils.Helpers;
 using AltinnDesktopTool.ViewModel;
-
 using AutoMapper;
-
 using log4net;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using Moq;
-
 using RestClient;
 using RestClient.DTO;
 

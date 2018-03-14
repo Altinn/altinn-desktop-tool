@@ -32,8 +32,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <CheckBox PreviewMouseDown="UIElement_OnPreviewMouseDown" HorizontalAlignment="Center" 
-                                      IsChecked="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                      Command="{Binding DataContext.ItemChecked,RelativeSource={RelativeSource Mode=Self}}" />
+                                      IsChecked="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

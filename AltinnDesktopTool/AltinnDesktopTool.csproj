@@ -96,9 +96,13 @@
     <Compile Include="Model\OfficialContactModel.cs" />
     <Compile Include="Model\OrganizationModel.cs" />
     <Compile Include="Model\PersonalContactModel.cs" />
+    <Compile Include="Model\RoleModel.cs" />
+    <Compile Include="Model\RolesSearchResultModel.cs" />
     <Compile Include="Model\SearchResultModel.cs" />
+    <Compile Include="Model\SearchRolesAndRightsInformationModel.cs" />
     <Compile Include="Model\SearchType.cs" />
     <Compile Include="Utils\Helpers\AutomapperHelper.cs" />
+    <Compile Include="Utils\Helpers\BindingProxy.cs" />
     <Compile Include="Utils\Helpers\ProxyConfigHelper.cs" />
     <Compile Include="Utils\PubSub\EventNames.cs" />
     <Compile Include="Utils\PubSub\PubSub.cs" />
@@ -110,14 +114,18 @@
     <Compile Include="Model\SearchOrganizationInformationModel.cs" />
     <Compile Include="Utils\Converters\RadioButtonCheckedConverter.cs" />
     <Compile Include="ViewModel\MapperProfiles\SearchMapperProfile.cs" />
+    <Compile Include="ViewModel\RolesSearchResultViewModel.cs" />
     <Compile Include="ViewModel\SearchOrganizationInformationViewModel.cs" />
     <Compile Include="ViewModel\SearchResultViewModel.cs" />
-    <Compile Include="ViewModel\TopViewModel.cs" />
+    <Compile Include="ViewModel\SearchRolesAndRightsInformationViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\RolesSearchResultView.xaml.cs">
+      <DependentUpon>RolesSearchResultView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SearchOrganizationInformation.xaml.cs">
       <DependentUpon>SearchOrganizationInformation.xaml</DependentUpon>
@@ -128,8 +136,8 @@
     <Compile Include="View\Footer.xaml.cs">
       <DependentUpon>Footer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\TopView.xaml.cs">
-      <DependentUpon>TopView.xaml</DependentUpon>
+    <Compile Include="View\SearchRolesAndRightsInformation.xaml.cs">
+      <DependentUpon>SearchRolesAndRightsInformation.xaml</DependentUpon>
     </Compile>
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +159,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\RolesSearchResultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\SearchOrganizationInformation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -163,7 +175,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\TopView.xaml">
+    <Page Include="View\SearchRolesAndRightsInformation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -213,6 +225,7 @@
   <ItemGroup>
     <Content Include="Configuration\EnvironmentConfigurations.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Resource Include="View\Images\altinnT.ico" />
     <Resource Include="View\Images\altinn.ico" />

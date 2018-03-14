@@ -1,21 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
-
 using AltinnDesktopTool.Model;
 using AltinnDesktopTool.Utils.Helpers;
 using AltinnDesktopTool.Utils.PubSub;
 using AltinnDesktopTool.View;
 using AltinnDesktopTool.ViewModel;
-
 using AutoMapper;
-
 using log4net;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using Moq;
-
 using RestClient;
 using RestClient.DTO;
 

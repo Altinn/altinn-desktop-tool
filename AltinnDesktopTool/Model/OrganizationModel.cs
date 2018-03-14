@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-
 using AltinnDesktopTool.Utils.PubSub;
 
 namespace AltinnDesktopTool.Model

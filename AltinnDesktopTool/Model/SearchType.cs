@@ -23,6 +23,16 @@
         /// <summary>
         /// The search input is an organization number.
         /// </summary>
-        OrganizationNumber = 3
+        OrganizationNumber = 3,
+
+        /// <summary>
+        /// The search input is a sosial security number.
+        /// </summary>
+        SSN = 4,
+
+        /// <summary>
+        /// The search input is unknown.
+        /// </summary>
+        Unknown = 5
     }
 }

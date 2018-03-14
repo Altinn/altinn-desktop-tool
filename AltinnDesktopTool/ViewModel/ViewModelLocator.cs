@@ -14,13 +14,10 @@
 
 using AltinnDesktopTool.Utils.Helpers;
 using AltinnDesktopTool.Utils.PubSub;
-
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
-
 using log4net;
 using Microsoft.Practices.ServiceLocation;
-
 using RestClient;
 
 namespace AltinnDesktopTool.ViewModel
@@ -48,8 +45,9 @@ namespace AltinnDesktopTool.ViewModel
             // View models
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<SearchOrganizationInformationViewModel>();
+            SimpleIoc.Default.Register<SearchRolesAndRightsInformationViewModel>();
             SimpleIoc.Default.Register<SearchResultViewModel>();
-            SimpleIoc.Default.Register<TopViewModel>();
+            SimpleIoc.Default.Register<RolesSearchResultViewModel>();
             SimpleIoc.Default.Register<FooterViewModel>();
 
             // Proxy
@@ -65,16 +63,22 @@ namespace AltinnDesktopTool.ViewModel
         /// Gets the SearchOrganizationInformationViewModel
         /// </summary>
         public SearchOrganizationInformationViewModel SearchOrganizationInformationViewModel => ServiceLocator.Current.GetInstance<SearchOrganizationInformationViewModel>();
-        
+
+        /// <summary>
+        /// Gets the SearchRolesAndRightsInformationViewModel
+        /// </summary>
+        public SearchRolesAndRightsInformationViewModel SearchRolesAndRightsInformationViewModel => ServiceLocator.Current.GetInstance<SearchRolesAndRightsInformationViewModel>();
+
+
         /// <summary>
         /// Gets the SearchResultViewModel
         /// </summary>
         public SearchResultViewModel SearchResultViewModel => ServiceLocator.Current.GetInstance<SearchResultViewModel>();
-        
+
         /// <summary>
-        /// Gets the TopViewModel
+        /// Gets the SearchResultViewModel
         /// </summary>
-        public TopViewModel TopViewModel => ServiceLocator.Current.GetInstance<TopViewModel>();
+        public RolesSearchResultViewModel RolesSearchResultViewModel => ServiceLocator.Current.GetInstance<RolesSearchResultViewModel>();
         
         /// <summary>
         /// Gets the FooterViewModel

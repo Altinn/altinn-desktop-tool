@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-
 using RestClient.DTO;
 
 namespace RestClient
@@ -31,6 +30,11 @@ namespace RestClient
         private static readonly PropertyInfo PropPersContPersonalContactId = typeof(PersonalContact).GetProperty("PersonalContactId");
         private static readonly PropertyInfo PropPersContName = typeof(PersonalContact).GetProperty("Name");
         private static readonly PropertyInfo PropPersContSocialSecurityNumber = typeof(PersonalContact).GetProperty("SocialSecurityNumber");
+
+        private static readonly PropertyInfo PropRoleRoleType = typeof(Role).GetProperty("RoleType");
+        private static readonly PropertyInfo PropRoleRoleDefinitionId = typeof(Role).GetProperty("RoleDefinitionId");
+        private static readonly PropertyInfo PropRoleRoleName = typeof(Role).GetProperty("RoleName");
+        private static readonly PropertyInfo PropRoleRoleDescription = typeof(Role).GetProperty("RoleDescription");
 
         /// <summary>
         /// Fetches a object by a given link (url).
@@ -120,6 +124,30 @@ namespace RestClient
                 this.CreatePersContact2(contact2);
                 this.CreatePersContact3(contact3);
             }
+
+            return list;
+        }
+
+        /// <summary>
+        /// Search for a list of objects by filtering on a list of given name value pairs.
+        /// The possible values name value pairs depends on the controller being called.
+        /// The controller is identified by the type T.
+        /// </summary>
+        /// <typeparam name="T">The type of objects to be retrieved. This also determines the controller to call.</typeparam>
+        /// <param name="filter">The list of name value pair filter</param>
+        /// <returns>A list of objects, empty or null if none found</returns>
+        public IList<T> Get<T>(List<KeyValuePair<string, string>> filter) where T : HalJsonResource
+        {
+            T role1 = Activator.CreateInstance<T>();
+            T role2 = Activator.CreateInstance<T>();
+
+            List<T> list = new List<T>()
+            {
+                role1, role2
+            };
+
+            this.CreateRole1(role1);
+            this.CreateRole2(role2);
 
             return list;
         }
@@ -219,6 +247,22 @@ namespace RestClient
             PropPersContPersonalContactId.SetValue(cont, "r13042941");
             PropPersContSocialSecurityNumber.SetValue(cont, "06128801558");
             PropPersContName.SetValue(cont, "DONALD DUCK TRUMP");
+        }
+
+        private void CreateRole1(object role)
+        {
+            PropRoleRoleDefinitionId.SetValue(role, "5");
+            PropRoleRoleType.SetValue(role, "Altinn");
+            PropRoleRoleName.SetValue(role, "Accounting employee");
+            PropRoleRoleDescription.SetValue(role, "Access to accounting related forms and services");
+        }
+
+        private void CreateRole2(object role)
+        {
+            PropRoleRoleDefinitionId.SetValue(role, "4");
+            PropRoleRoleType.SetValue(role, "Altinn");
+            PropRoleRoleName.SetValue(role, "Access manager");
+            PropRoleRoleDescription.SetValue(role, "Administration of access");
         }
     }
 }

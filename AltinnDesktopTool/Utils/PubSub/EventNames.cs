@@ -29,5 +29,30 @@
         /// Organization Selected Changed All Event
         /// </summary>
         public static readonly string OrganizationSelectedAllChangedEvent = "OrganizationSelectedAllChangedEvent";
+
+        /// <summary>
+        /// Role Selected Changed Event
+        /// </summary>
+        public static readonly string RoleSelectedChangedEvent = "RoleSelectedChangedEvent";
+
+        /// <summary>
+        /// Role Selected Changed All Event
+        /// </summary>
+        public static readonly string RoleSelectedAllChangedEvent = "RoleSelectedAllChangedEvent";
+
+        /// <summary>
+        /// Tab Selected Changed Event
+        /// </summary>
+        public static readonly string TabItemChangedEvent = "TabItemChangedEvent";
+
+        /// <summary>
+        /// Role Search Event
+        /// </summary>
+        public static readonly string RoleSearchResultReceivedEvent = "RoleSearchResultReceivedEvent";
+
+        /// <summary>
+        /// Role Search Started Event
+        /// </summary>
+        public static readonly string RoleSearchStartedEvent = "RoleSearchStartedEvent";
     }
 }

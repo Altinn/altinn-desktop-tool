@@ -70,6 +70,15 @@ namespace AltinnDesktopTool.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mobilnummer / Epost / Organisasjonsnummer:.
+        /// </summary>
+        public static string ContactInformationSearchLabel {
+            get {
+                return ResourceManager.GetString("ContactInformationSearchLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kopier til tekstformat.
         /// </summary>
         public static string CopyPlainTextTooltip {
@@ -243,6 +252,51 @@ namespace AltinnDesktopTool.View {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rollegiver (SSN/Organisasjonsnummer):.
+        /// </summary>
+        public static string Reportee {
+            get {
+                return ResourceManager.GetString("Reportee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Id.
+        /// </summary>
+        public static string RoleGridColumnRoleDefinitionId {
+            get {
+                return ResourceManager.GetString("RoleGridColumnRoleDefinitionId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beskrivelse.
+        /// </summary>
+        public static string RoleGridColumnRoleDescription {
+            get {
+                return ResourceManager.GetString("RoleGridColumnRoleDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rolle.
+        /// </summary>
+        public static string RoleGridColumnRoleName {
+            get {
+                return ResourceManager.GetString("RoleGridColumnRoleName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        public static string RoleGridColumnRoleType {
+            get {
+                return ResourceManager.GetString("RoleGridColumnRoleType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Søk.
         /// </summary>
         public static string SearchButtonText {
@@ -275,6 +329,15 @@ namespace AltinnDesktopTool.View {
         public static string SearchLabelErrorGeneralError {
             get {
                 return ResourceManager.GetString("SearchLabelErrorGeneralError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Søket inneholder ugyldig input.
+        /// </summary>
+        public static string SearchLabelErrorInvalidInput {
+            get {
+                return ResourceManager.GetString("SearchLabelErrorInvalidInput", resourceCulture);
             }
         }
         
@@ -320,6 +383,33 @@ namespace AltinnDesktopTool.View {
         public static string SelectAll {
             get {
                 return ResourceManager.GetString("SelectAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rollehaver (SSN/Organisasjonsnummer):.
+        /// </summary>
+        public static string Subject {
+            get {
+                return ResourceManager.GetString("Subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kontaktinformasjon.
+        /// </summary>
+        public static string TabKontaktinformasjon {
+            get {
+                return ResourceManager.GetString("TabKontaktinformasjon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roller.
+        /// </summary>
+        public static string TabRoller {
+            get {
+                return ResourceManager.GetString("TabRoller", resourceCulture);
             }
         }
     }

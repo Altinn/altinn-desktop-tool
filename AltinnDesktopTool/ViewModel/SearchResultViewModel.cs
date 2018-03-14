@@ -5,16 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Input;
-
 using AltinnDesktopTool.Model;
 using AltinnDesktopTool.Utils.Helpers;
 using AltinnDesktopTool.Utils.PubSub;
 using AltinnDesktopTool.View;
-
 using AutoMapper;
 using GalaSoft.MvvmLight.Command;
 using log4net;
-
 using RestClient;
 using RestClient.DTO;
 using RestClient.Resources;

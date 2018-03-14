@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using RestClient.Deserialize;
 using RestClient.DTO;
 
@@ -170,6 +168,53 @@ namespace RestClient.Test
 }
 ";
 
+        private const string Roles =
+@"
+{
+	""_links"": {
+		""self"": {
+			""href"": ""https://tt02.altinn.basefarm.net/api/serviceowner/authorization/roles?subject=16024400143&reportee=910028146""
+		}
+	},
+	""_embedded"": {
+        ""roles"" : [
+            {
+		        ""RoleType"": ""Altinn"",
+		        ""RoleDefinitionId"": ""4"",
+		        ""RoleName"": ""Access manager"",
+		        ""RoleDescription"": ""Administration of access"",
+                ""_links"" : {
+                    ""roledefinition"" : {
+                        ""href"" : ""https://tt02.altinn.basefarm.net/api/serviceowner/roledefinitions/4""
+                    }
+                }
+            },
+            {
+		        ""RoleType"": ""Altinn"",
+		        ""RoleDefinitionId"": ""6"",
+		        ""RoleName"": ""Accounting employee"",
+		        ""RoleDescription"": ""Access to accounting related forms and services"",
+                ""_links"" : {
+                    ""roledefinition"" : {
+                        ""href"" : ""https://tt02.altinn.basefarm.net/api/serviceowner/roledefinitions/6""
+                    }
+                }
+            },
+            {
+		        ""RoleType"": ""Altinn"",
+		        ""RoleDefinitionId"": ""8"",
+		        ""RoleName"": ""Auditor certifies validity of VAT compensation"",
+		        ""RoleDescription"": ""Certification by auditor of RF-0009"",
+                ""_links"" : {
+                    ""roledefinition"" : {
+                        ""href"" : ""https://tt02.altinn.basefarm.net/api/serviceowner/roledefinitions/8""
+                    }
+                }
+            }
+        ]
+    }
+}";
+
         /// <summary>
         /// Scenario: 
         ///   Deserialize a <code>hal+json</code> formatted string into a list of organizations.
@@ -244,6 +289,25 @@ namespace RestClient.Test
 
             // Assert
             Assert.AreEqual(2, result.Count);
+        }
+
+        /// <summary>
+        /// Scenario: 
+        ///   Deserialize a <code>hal+json</code> formatted string into a list of roles.
+        /// Expected Result: 
+        ///   A populated list of roles.
+        /// Success Criteria: 
+        ///   The list of roles has the correct number of entries.
+        /// </summary>
+        [TestMethod]
+        public void DeserializeHalJsonResourceListTest_DeserializeRoleList()
+        {
+            // Arrange
+            // Act
+            List<Role> result = Deserializer.DeserializeHalJsonResourceList<Role>(Roles);
+
+            // Assert
+            Assert.AreEqual(3, result.Count);
         }
     }
 }

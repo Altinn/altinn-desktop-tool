@@ -4,18 +4,13 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Media;
-
 using AltinnDesktopTool.Model;
 using AltinnDesktopTool.Utils.Helpers;
 using AltinnDesktopTool.Utils.PubSub;
 using AltinnDesktopTool.View;
-
 using AutoMapper;
-
 using GalaSoft.MvvmLight.Command;
-
 using log4net;
-
 using RestClient;
 using RestClient.DTO;
 using RestClient.Resources;

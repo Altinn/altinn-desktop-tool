@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Windows.Media;
-
 using AltinnDesktopTool.Properties;
 
 namespace AltinnDesktopTool.Model

@@ -1,12 +1,9 @@
 using System.ComponentModel;
 using System.Windows;
-
 using AltinnDesktopTool.Configuration;
 using AltinnDesktopTool.Utils.PubSub;
-
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-
 using MahApps.Metro;
 
 namespace AltinnDesktopTool.ViewModel
@@ -34,7 +31,7 @@ namespace AltinnDesktopTool.ViewModel
         {
             ViewModelLocator.Cleanup();
         }
-        
+
         private void EnvironmentChangedEventHandler(object sender, PubSubEventArgs<string> args)
         {
             ThemeManager.ChangeAppStyle(Application.Current, ThemeManager.GetAccent(EnvironmentConfigurationManager.ActiveEnvironmentConfiguration.ThemeName), ThemeManager.GetAppTheme("BaseLight"));

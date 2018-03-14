@@ -2,7 +2,6 @@
 using System.Net;
 using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
-
 using RestClient.Resources;
 
 namespace RestClient
@@ -249,7 +248,7 @@ namespace RestClient
             store.Open(OpenFlags.ReadOnly);
 
             X509Certificate2Collection certificateColl = store.Certificates.Find(X509FindType.FindByThumbprint, this.thumbprint, false);
-            if (certificateColl.Count < 0)
+            if (certificateColl.Count <= 0)
             {
                 throw new RestClientException("Certificate not found.", RestClientErrorCodes.RestClientConfigurationError);
             }

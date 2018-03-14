@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-
 using AltinnDesktopTool.Configuration;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AltinnDesktopToolTest.Configuration
