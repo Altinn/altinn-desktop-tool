@@ -56,6 +56,7 @@ namespace RestClient.Controllers
             {
                 url += $"&{item.Key}={item.Value}";
             }
+            url += "&language=1044";
             string result = this.Context.RestClient.Get(url);
             return result != null ? Deserializer.DeserializeHalJsonResourceList<T>(result) : null;
         }
