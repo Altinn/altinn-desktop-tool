@@ -40,11 +40,9 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <view:SearchOrganizationInformation Grid.Row="0"/>
-<<<<<<< Updated upstream
                     <view:SearchResultView Grid.Row="1" Margin="0,5,0,-5" Loaded="SearchResultView_Loaded"/>
-=======
                     <view:SearchResultView Grid.Row="1" Margin="0,5,0,-5" Loaded="SearchResultView_Loaded" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
->>>>>>> Stashed changes
+
                 </Grid>
             </TabItem>
             <TabItem Header="{x:Static view:Resources.TabRoller}" controls:ControlsHelper.HeaderFontSize="20"

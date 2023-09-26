@@ -136,13 +136,8 @@
     <value>Applikasjon for oppslag i kontaktinformasjon for virksomheter</value>
   </data>
   <data name="InfoText" xml:space="preserve">
-    <value>Ved å fylle inn e-post/organisasjonsnummer/telefonnummer har man mulighet til å gjøre oppslag i Altinns kontaktinformasjon for virksomheter. Målet er å hjelpe kunder med å finne ut hvorfor de får varslinger fra Altinns miljøer.
+    <value>Ved å fylle inn e-post/organisasjonsnummer/telefonnummer har man mulighet til å gjøre oppslag i Altinns kontaktinformasjon for virksomheter. Målet er å hjelpe kunder med å finne ut hvorfor de får varslinger fra Altinns miljøer. Hvis du har spørsmål / bugs, gå til https://github.com/Altinn/altinn-desktop-tool</value>
 
-<<<<<<< Updated upstream
-Hvis du har spørsmål / bugs, gå til https://github.com/Altinn/altinn-desktop-tool</value>
-=======
-Ved bugs / spørsmål gå til https://github.com/Altinn/altinn-desktop-tool</value>
->>>>>>> Stashed changes
   </data>
   <data name="NoDataText" xml:space="preserve">
     <value>Ingen data funnet</value>

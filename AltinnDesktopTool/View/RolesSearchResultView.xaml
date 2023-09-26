@@ -18,11 +18,8 @@
             <RowDefinition/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
-<<<<<<< Updated upstream
-        <DataGrid x:Name="RoleGrid" IsReadOnly="True" ItemsSource="{Binding Model.ResultCollection}" Margin="10,10,10,20" GridLinesVisibility="All" AlternationCount="2" AutoGenerateColumns="False" BorderThickness="0" SelectionMode="Single" SelectionUnit="FullRow" SelectionChanged="RoleGrid_SelectionChanged">
-=======
         <DataGrid x:Name="RoleGrid" IsReadOnly="False" ItemsSource="{Binding Model.ResultCollection}" Margin="10,10,10,20" GridLinesVisibility="All" AlternationCount="2" AutoGenerateColumns="False" BorderThickness="0" SelectionMode="Single" SelectionUnit="FullRow" SelectionChanged="RoleGrid_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True">
->>>>>>> Stashed changes
+
             <DataGrid.Resources>
                 <local:BindingProxy x:Key="BindingProxy" Data="{Binding}" />
             </DataGrid.Resources>
@@ -58,6 +55,7 @@
                 </Style>
             </DataGrid.Style>
         </DataGrid>
+
         <TextBlock Grid.Row="0"  FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Center" Text="{Binding Model.InfoText}" Visibility="{Binding Path=Model.EmptyMessageVisibility, Converter={StaticResource BoolToVisability}}"/>
         <controls:ProgressRing IsActive="{Binding Model.IsBusy}" />
         <Border Grid.Row="1" Margin="0,0,0,0" Background="{DynamicResource AccentColorBrush2}" />
@@ -72,16 +70,16 @@
                 </Rectangle>
             </StackPanel>
         </Button>
-        <Button Grid.Row="1" Command="{Binding CopyToClipboardPlainTextCommand}" ToolTip="{x:Static view:Resources.CopyPlainTextTooltip}" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,110,0" Style="{DynamicResource AccentedSquareButtonStyle}">
-            <StackPanel Orientation="Horizontal">
-                <Rectangle x:Name="rectButtonCopy" Width="40" Height="40" 
+                <Button Grid.Row="1" Command="{Binding CopyToClipboardPlainTextCommand}" ToolTip="{x:Static view:Resources.CopyPlainTextTooltip}" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,110,0" Style="{DynamicResource AccentedSquareButtonStyle}">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle x:Name="rectButtonCopy" Width="40" Height="40" 
                Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
-                    <Rectangle.OpacityMask>
-                        <VisualBrush Stretch="Fill"
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Fill"
                      Visual="{DynamicResource appbar_clipboard_paste}" />
-                    </Rectangle.OpacityMask>
-                </Rectangle>
-            </StackPanel>
-        </Button>
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                    </StackPanel>
+                </Button>
     </Grid>
 </UserControl>
