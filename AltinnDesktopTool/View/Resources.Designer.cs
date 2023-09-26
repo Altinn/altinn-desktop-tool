@@ -19,7 +19,7 @@ namespace AltinnDesktopTool.View {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -117,7 +117,7 @@ namespace AltinnDesktopTool.View {
         /// <summary>
         ///   Looks up a localized string similar to Ved å fylle inn e-post/organisasjonsnummer/telefonnummer har man mulighet til å gjøre oppslag i Altinns kontaktinformasjon for virksomheter. Målet er å hjelpe kunder med å finne ut hvorfor de får varslinger fra Altinns miljøer.
         ///
-        ///Kontakt Erlend Oksvoll (eok@brreg.no) ved spørsmål!.
+        ///Hvis du har spørsmål / bugs, gå til https://github.com/Altinn/altinn-desktop-tool.
         /// </summary>
         public static string InfoText {
             get {

@@ -12,5 +12,10 @@
         {
             this.InitializeComponent();
         }
+
+        private void RoleGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

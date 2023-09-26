@@ -138,7 +138,7 @@
   <data name="InfoText" xml:space="preserve">
     <value>Ved å fylle inn e-post/organisasjonsnummer/telefonnummer har man mulighet til å gjøre oppslag i Altinns kontaktinformasjon for virksomheter. Målet er å hjelpe kunder med å finne ut hvorfor de får varslinger fra Altinns miljøer.
 
-Kontakt Erlend Oksvoll (eok@brreg.no) ved spørsmål!</value>
+Hvis du har spørsmål / bugs, gå til https://github.com/Altinn/altinn-desktop-tool</value>
   </data>
   <data name="NoDataText" xml:space="preserve">
     <value>Ingen data funnet</value>

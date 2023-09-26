@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using log4net;
+using Common.Logging;
 using RestClient.Controllers;
 using RestClient.DTO;
 using RestClient.Resources;
