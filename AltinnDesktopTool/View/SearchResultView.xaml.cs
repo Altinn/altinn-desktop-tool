@@ -31,5 +31,15 @@ namespace AltinnDesktopTool.View
 
             e.Handled = true;
         }
+
+        private void OrganizationGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void PersonalContactsGrid_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
     }
 }

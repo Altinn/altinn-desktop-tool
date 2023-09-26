@@ -18,7 +18,11 @@
             <RowDefinition/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
+<<<<<<< Updated upstream
         <DataGrid x:Name="RoleGrid" IsReadOnly="True" ItemsSource="{Binding Model.ResultCollection}" Margin="10,10,10,20" GridLinesVisibility="All" AlternationCount="2" AutoGenerateColumns="False" BorderThickness="0" SelectionMode="Single" SelectionUnit="FullRow" SelectionChanged="RoleGrid_SelectionChanged">
+=======
+        <DataGrid x:Name="RoleGrid" IsReadOnly="False" ItemsSource="{Binding Model.ResultCollection}" Margin="10,10,10,20" GridLinesVisibility="All" AlternationCount="2" AutoGenerateColumns="False" BorderThickness="0" SelectionMode="Single" SelectionUnit="FullRow" SelectionChanged="RoleGrid_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True">
+>>>>>>> Stashed changes
             <DataGrid.Resources>
                 <local:BindingProxy x:Key="BindingProxy" Data="{Binding}" />
             </DataGrid.Resources>

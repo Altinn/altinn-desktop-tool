@@ -1,45 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <EnvironmentConfigurations>
-  <EnvironmentConfiguration>
-    <name>PROD</name>
-    <themeName>Blue</themeName>
-    <apiKey><!--API KEY - ORDER FROM BASEFARM--></apiKey>
-    <baseAddress><!--URL TO ALTINN ENVIRONMENT -->/api/serviceowner/</baseAddress>
-    <thumbprint><!--CERTIFICATE THUMBPRINT --></thumbprint>
-    <ignoreSslErrors>false</ignoreSslErrors>
-    <timeout>30</timeout>
-  </EnvironmentConfiguration>
-  
-   <EnvironmentConfiguration>
-    <name>AT07</name>
-    <themeName>Purple</themeName>
-    <apiKey></apiKey>
-    <baseAddress>#url#/api/serviceowner/
-    </baseAddress>
-    <thumbprint></thumbprint>
-    <ignoreSslErrors>false</ignoreSslErrors>
-    <timeout>30</timeout>
-  </EnvironmentConfiguration>
-   <EnvironmentConfiguration>
-    <name>AT08</name>
-    <themeName>Orange</themeName>
-    <apiKey></apiKey>
-    <baseAddress>#url#/api/serviceowner/
-    </baseAddress>
-    <thumbprint></thumbprint>
-    <ignoreSslErrors>false</ignoreSslErrors>
-    <timeout>30</timeout>
-    <timeout>30</timeout>
-  </EnvironmentConfiguration>
-   <EnvironmentConfiguration>
-    <name>ST02</name>
-    <themeName>Green</themeName>
-    <apiKey></apiKey>
-    <baseAddress>#url#/api/serviceowner/
-    </baseAddress>
-    <thumbprint></thumbprint>
-    <ignoreSslErrors>false</ignoreSslErrors>
-    <timeout>30</timeout>
-  </EnvironmentConfiguration>
-  
+<EnvironmentConfiguration>
+<name>PROD</name>
+<themeName>Blue</themeName>
+<apiKey></apiKey>
+<baseAddress></baseAddress>
+<thumbprint></thumbprint>
+<ignoreSslErrors>false</ignoreSslErrors>
+<timeout>30</timeout>
+</EnvironmentConfiguration>
+<EnvironmentConfiguration>
+<name>TT02</name>
+<themeName>Orange</themeName>
+<apiKey></apiKey>
+<baseAddress></baseAddress>
+<thumbprint></thumbprint>
+<ignoreSslErrors>false</ignoreSslErrors>
+<timeout>30</timeout>
+</EnvironmentConfiguration>
 </EnvironmentConfigurations>
