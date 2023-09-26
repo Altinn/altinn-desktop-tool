@@ -18,7 +18,7 @@
             <RowDefinition/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="RoleGrid" IsReadOnly="True" ItemsSource="{Binding Model.ResultCollection}" Margin="10,10,10,20" GridLinesVisibility="All" AlternationCount="2" AutoGenerateColumns="False" BorderThickness="0" SelectionMode="Single" SelectionUnit="FullRow">
+        <DataGrid x:Name="RoleGrid" IsReadOnly="True" ItemsSource="{Binding Model.ResultCollection}" Margin="10,10,10,20" GridLinesVisibility="All" AlternationCount="2" AutoGenerateColumns="False" BorderThickness="0" SelectionMode="Single" SelectionUnit="FullRow" SelectionChanged="RoleGrid_SelectionChanged">
             <DataGrid.Resources>
                 <local:BindingProxy x:Key="BindingProxy" Data="{Binding}" />
             </DataGrid.Resources>

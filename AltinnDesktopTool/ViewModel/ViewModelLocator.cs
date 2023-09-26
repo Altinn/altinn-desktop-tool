@@ -16,7 +16,7 @@ using AltinnDesktopTool.Utils.Helpers;
 using AltinnDesktopTool.Utils.PubSub;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
-using log4net;
+using Common.Logging;
 using Microsoft.Practices.ServiceLocation;
 using RestClient;
 
@@ -37,7 +37,6 @@ namespace AltinnDesktopTool.ViewModel
 
             // Logging
             SimpleIoc.Default.Register(() => LogManager.GetLogger(this.GetType())); // ILog
-            log4net.Config.XmlConfigurator.Configure();
 
             // AutoMapper
             SimpleIoc.Default.Register(AutoMapperHelper.RunCreateMaps); // IMapper

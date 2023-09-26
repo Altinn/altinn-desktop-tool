@@ -20,5 +20,10 @@ namespace AltinnDesktopTool.View
         {
             await this.ShowMessageAsync(View.Resources.HeaderText, View.Resources.InfoText);
         }
+
+        private void SearchResultView_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

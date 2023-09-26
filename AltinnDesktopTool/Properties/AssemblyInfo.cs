@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Altinn Toolkit")]
-[assembly: AssemblyCopyright("Copyright ©  Altinn 2016")]
+[assembly: AssemblyCopyright("Copyright ©  Altinn 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
