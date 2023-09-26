@@ -18,7 +18,7 @@
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="OrganizationGrid" IsReadOnly="True" ItemsSource="{Binding Model.ResultCollection}" Margin="10,10,10,20" GridLinesVisibility="All" AlternationCount="2" AutoGenerateColumns="False" BorderThickness="0" SelectionMode="Single" SelectionUnit="FullRow">
+        <DataGrid x:Name="OrganizationGrid" IsReadOnly="True" ItemsSource="{Binding Model.ResultCollection}" Margin="10,10,10,20" GridLinesVisibility="All" AlternationCount="2" AutoGenerateColumns="False" BorderThickness="0" SelectionMode="Single" SelectionUnit="FullRow" SelectionChanged="OrganizationGrid_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="False" HorizontalScrollBarVisibility="Auto">
             <DataGrid.Columns>
 
                 <DataGridTextColumn Header="{x:Static view:Resources.OrganizationGridColumnName}" Binding="{Binding Name}" Width="*"/>
@@ -63,7 +63,7 @@
                     <Border BorderThickness="1" Padding="10">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="{x:Static view:Resources.PersonalContactsTitle}"/>
-                            <DataGrid x:Name="PersonalContactsGrid" ItemsSource="{Binding PersonalContactsCollection}" GridLinesVisibility="All" IsReadOnly="True" SelectionUnit="FullRow" AutoGenerateColumns="False">
+                            <DataGrid x:Name="PersonalContactsGrid" ItemsSource="{Binding PersonalContactsCollection}" GridLinesVisibility="All" IsReadOnly="False" SelectionUnit="FullRow" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollBar.Scroll="PersonalContactsGrid_Scroll">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="{x:Static view:Resources.PersonalContactsGridColumnName}" Binding="{Binding Name}"/>
                                     <DataGridTextColumn Header="{x:Static view:Resources.PersonalContactsGridColumnSsn}" Binding="{Binding SocialSecurityNumber}"/>
