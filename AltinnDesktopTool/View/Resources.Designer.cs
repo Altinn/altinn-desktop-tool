@@ -115,9 +115,7 @@ namespace AltinnDesktopTool.View {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ved å fylle inn e-post/organisasjonsnummer/telefonnummer har man mulighet til å gjøre oppslag i Altinns kontaktinformasjon for virksomheter. Målet er å hjelpe kunder med å finne ut hvorfor de får varslinger fra Altinns miljøer.
-        ///
-        ///Hvis du har spørsmål / bugs, gå til https://github.com/Altinn/altinn-desktop-tool.
+        ///   Looks up a localized string similar to Ved å fylle inn e-post/organisasjonsnummer/telefonnummer har man mulighet til å gjøre oppslag i Altinns kontaktinformasjon for virksomheter. Målet er å hjelpe kunder med å finne ut hvorfor de får varslinger fra Altinns miljøer. Hvis du har spørsmål / bugs, gå til https://github.com/Altinn/altinn-desktop-tool.
         /// </summary>
         public static string InfoText {
             get {
