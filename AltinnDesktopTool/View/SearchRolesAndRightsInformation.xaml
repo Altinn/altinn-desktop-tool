@@ -35,7 +35,7 @@
         <TextBox Name="SubjectSearchText" Grid.Row="1" Margin="10,0,10,10" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Model.SubjectSearchText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"></TextBox>
         <Label Content="{x:Static view:Resources.Reportee}" Margin="5,0,0,0" Grid.Row="2" Height="28" Name="BaseLabel2" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" />
         <TextBox Name="ReporteeSearchText" Grid.Row="3" Margin="10,0,10,10" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding Model.ReporteeSearchText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-        <Button Grid.Row="4" Margin="10,0,10,10" MinWidth="60" VerticalAlignment="Center" HorizontalAlignment="Left" IsDefault="True" Command="{Binding SearchCommand}" CommandParameter="{Binding Model}" Content="{x:Static view:Resources.SearchButtonText}" Style="{StaticResource AccentedSquareButtonStyle}" custom:ButtonHelper.PreserveTextCase="True"/>
+        <Button Grid.Row="4" Margin="10,0,10,10" MinWidth="60" VerticalAlignment="Center" HorizontalAlignment="Left" IsDefault="True" Command="{Binding SearchCommand}" CommandParameter="{Binding Model}" Content="{x:Static view:Resources.SearchButtonText}" Style="{StaticResource AccentedSquareButtonStyle}" custom:ButtonHelper.PreserveTextCase="True" BorderThickness="1,1,1,1" Background="#FF0163BA"/>
         <Label Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="{Binding Model.LabelText, Mode=OneWay}" Foreground="{Binding Model.LabelBrush, Mode=OneWay}" FontWeight="Bold"/>
     </Grid>
 </UserControl>

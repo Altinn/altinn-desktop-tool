@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <EnvironmentConfigurations>
-<EnvironmentConfiguration>
-<name>PROD</name>
-<themeName>Blue</themeName>
-<apiKey></apiKey>
-<baseAddress></baseAddress>
-<thumbprint></thumbprint>
-<ignoreSslErrors>false</ignoreSslErrors>
-<timeout>30</timeout>
-</EnvironmentConfiguration>
-<EnvironmentConfiguration>
-<name>TT02</name>
-<themeName>Orange</themeName>
-<apiKey></apiKey>
-<baseAddress></baseAddress>
-<thumbprint></thumbprint>
-<ignoreSslErrors>false</ignoreSslErrors>
-<timeout>30</timeout>
-</EnvironmentConfiguration>
+	<EnvironmentConfiguration>
+		<name>PROD</name>
+		<themeName>Blue</themeName>
+		<apiKey></apiKey>
+		<baseAddress></baseAddress>
+		<thumbprint></thumbprint>
+		<ignoreSslErrors>false</ignoreSslErrors>
+		<timeout>30</timeout>
+	</EnvironmentConfiguration>
+	<EnvironmentConfiguration>
+		<name>TT02</name>
+		<themeName>Orange</themeName>
+		<apiKey></apiKey>
+		<baseAddress></baseAddress>
+		<thumbprint></thumbprint>
+		<ignoreSslErrors>false</ignoreSslErrors>
+		<timeout>30</timeout>
+	</EnvironmentConfiguration>
 </EnvironmentConfigurations>
