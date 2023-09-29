@@ -280,3 +280,4 @@ __pycache__/
 
 ### VisualStudio Patch ###
 build/
+AltinnDesktopTool/Configuration/EnvironmentConfigurations.xml

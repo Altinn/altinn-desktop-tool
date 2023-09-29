@@ -279,9 +279,9 @@
     <Resource Include="View\Images\altinnT.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Configuration\EnvironmentConfigurations.xml">
+    <None Include="Configuration\EnvironmentConfigurations.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,8 +1,10 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
+
 using AltinnDesktopTool.Configuration;
 using AltinnDesktopTool.Utils.PubSub;
+
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
@@ -12,7 +14,7 @@ namespace AltinnDesktopTool.ViewModel
     /// ViewModel class, container for Environment change related components
     /// </summary>
     public class FooterViewModel : ViewModelBase
-    {                
+    {
         /// <summary>
         /// Initializes a new instance of the <see cref="FooterViewModel"/> class.
         /// ViewModel for Footer view
@@ -45,7 +47,7 @@ namespace AltinnDesktopTool.ViewModel
         /// <summary>
         /// Gets a command which will define a behavior on Change environment event
         /// </summary>
-        public ICommand ChangeEnvironmentCommand { get; private set; }        
+        public ICommand ChangeEnvironmentCommand { get; private set; }
 
         /// <summary>
         /// Event handler for the ChangeEnvironment command. Sets the active environment configuration and raises EnvironmentChanged event.
