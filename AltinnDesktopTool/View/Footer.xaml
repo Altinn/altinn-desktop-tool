@@ -20,17 +20,12 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ComboBox SelectedItem="{Binding SelectedEnvironment}" Height="10" Width="100" HorizontalAlignment="Right" Margin="10,10,40,10">
+        <ComboBox ItemsSource="{Binding EnvironmentNames}" SelectedItem="{Binding SelectedEnvironment}" Height="10" Width="100" HorizontalAlignment="Right" Margin="10,10,40,10">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
                     <i:InvokeCommandAction Command="{Binding ChangeEnvironmentCommand}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
-            <Image Height="100" Width="100">
-                <Image.OpacityMask>
-                    <ImageBrush/>
-                </Image.OpacityMask>
-            </Image>
         </ComboBox>
         <Image HorizontalAlignment="Left" Height="50" Margin="6,0,0,0" VerticalAlignment="Center" Width="116" Source="/View/Images/Digdir.png"/>
     </Grid>
