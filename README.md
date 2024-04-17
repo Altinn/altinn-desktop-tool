@@ -13,7 +13,7 @@ We're here to help. If you have any questions or need further clarification, ple
 
 ------------------------
 
-# Updated WPF client used by Altinn support
+# OUTDATED WPF client used by Altinn support
 Uses a public REST service to lookup contact information and roles delegated in the Altinn contact registry. 
 ## Building 
 Install WiX Toolset http://wixtoolset.org/
