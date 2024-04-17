@@ -1,9 +1,12 @@
 # **Important Update: Transition from WPF Toolkit to Web Application**
 
-We are excited to announce that the WPF Client, previously utilized by Altinn Support, is transitioning to a new, modern web application. The details and access link will be shared shortly.
+We are excited to announce that the WPF Client, previously utilized by Altinn Support, is transitioning to a new, modern web application. 
+
+### New Repository
+The WPF Toolkit repository is now archived. The new repository can be found [here.](https://github.com/Altinn/altinn-support-dashboard) 
 
 ### What This Means for You
-The transition marks the end of maintenance for the old WPF Toolkit, as we move towards a more secure and interactive platform. This upgrade is part of our ongoing efforts to enhance user experience and ensure the highest level of security.
+The transition marks the end of maintenance for the old WPF Toolkit, as we move towards a more secure and interactive platform. This upgrade is part of our ongoing efforts to enhance user experience and ensure the highest level of security. 
 
 ### Have Questions?
 We're here to help. If you have any questions or need further clarification, please feel free to reach out to [Espen E. Halsen](mailto:espen.elstad.halsen@digdir.no?subject=[Altinn-WPF-Archived]). We appreciate your cooperation and understanding during this transition phase.
